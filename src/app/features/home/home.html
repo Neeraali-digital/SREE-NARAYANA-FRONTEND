@@ -1,7 +1,7 @@
 <div class="bg-white min-h-[200vh] text-slate-800">
   
   <!-- Hero Section -->
-  <section class="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden">
+  <section class="relative min-h-[90vh] flex items-center pt-28 pb-8 overflow-hidden py-12">
     <!-- Abstract Ambient Glow Background -->
     <div class="absolute inset-0 z-0 select-none overflow-hidden">
         <div class="absolute top-[20%] left-[10%] w-[500px] h-[500px] bg-brand-500/10 rounded-full blur-[120px] animate-blob mix-blend-multiply"></div>
@@ -16,17 +16,17 @@
       
       <!-- Typography Side -->
       <div class="md:w-[55%] flex flex-col items-start pt-16 md:pt-0">
-        <div class="inline-flex items-center gap-2 px-4 py-2 mt-12 md:mt-0 rounded-full glass mb-8 border border-brand-500/20 text-xs font-bold tracking-[0.2em] text-brand-600 uppercase shadow-[0_0_15px_rgba(225,29,72,0.1)] backdrop-blur-3xl overflow-hidden group">
+        <!-- <div class="inline-flex items-center gap-2 px-4 py-2 mt-12 md:mt-0 rounded-full glass mb-8 border border-brand-500/20 text-xs font-bold tracking-[0.2em] text-brand-600 uppercase shadow-[0_0_15px_rgba(225,29,72,0.1)] backdrop-blur-3xl overflow-hidden group">
             <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse delay-75"></span>
             Admission Open 2026-2027
             <div class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-brand-500/10 to-transparent -translate-x-full group-hover:animate-[shimmer_2s_infinite]"></div>
-        </div>
+        </div> -->
 
-        <h1 #heroTitle class="text-[clamp(3rem,7vw,5rem)] font-black leading-[0.95] tracking-tighter mb-8 overflow-hidden">
+        <h1 #heroTitle class="text-[clamp(2.8rem,7vw,4.8rem)] font-black leading-[0.9] tracking-tighter mb-6 overflow-hidden">
           <div class="relative">
             <span class="block text-slate-900">ADMISSION OPEN</span>
             <span class="block text-slate-400">BATCH 2026-2027</span>
-            <span class="block bg-clip-text text-transparent bg-gradient-to-r from-brand-500 via-brand-600 to-accent-500 pb-2">JOIN OUR COLLEGE.</span>
+            <span class="block bg-clip-text text-transparent bg-gradient-to-r from-brand-500 via-brand-600 to-accent-500 pb-1">JOIN OUR COLLEGE.</span>
           </div>
         </h1>
 
@@ -52,14 +52,14 @@
       </div>
 
       <!-- Hero Visual Side -->
-      <div class="md:w-[45%] relative mt-20 md:mt-0 h-[500px] md:h-[700px] flex items-center justify-center">
+      <div class="md:w-[45%] relative mt-12 md:mt-0 h-[350px] md:h-[450px] flex items-center justify-center">
           
           <!-- Orbits & Glows -->
           <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] border border-slate-100 rounded-full animate-[spin_40s_linear_infinite] opacity-50"></div>
           <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-[90%] border border-brand-500/10 rounded-full animate-[spin_30s_linear_reverse_infinite] border-dashed"></div>
 
           <!-- Central Main Display -->
-          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] h-[380px] md:w-[350px] md:h-[480px] glass-card overflow-hidden group z-20 shadow-2xl transition-all duration-700">
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] h-[300px] md:w-[280px] md:h-[400px] glass-card overflow-hidden group z-20 shadow-2xl transition-all duration-700">
              <div class="absolute inset-0 bg-gradient-to-tr from-brand-600/20 to-transparent z-10"></div>
              <img src="nursing_college_hero_main_1773316058551.png" alt="Nursing Student Excellence" class="parallax-img w-full h-full object-cover group-hover:scale-110 transition-all duration-1000">
              
@@ -129,6 +129,65 @@
             </div>
         </div>
      </div>
+  </section>
+
+  <!-- Beyond Academics / Campus Life Section -->
+  <section class="py-32 relative bg-slate-50 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row gap-16 items-center">
+        <!-- Image Collage -->
+        <div class="w-full md:w-1/2 grid grid-cols-2 gap-4">
+          <div class="space-y-4">
+            <div class="rounded-3xl overflow-hidden shadow-xl aspect-square">
+              <img src="/campus_engagement_students_1773404944931.png" alt="Student Life" class="w-full h-full object-cover">
+            </div>
+            <div class="rounded-3xl overflow-hidden shadow-xl aspect-[3/4] bg-brand-600 flex items-center justify-center p-8 text-white">
+              <div>
+                <div class="text-4xl font-black mb-2">50+</div>
+                <div class="text-[10px] uppercase tracking-widest font-bold opacity-80">Annual Events & Cultural Activities</div>
+              </div>
+            </div>
+          </div>
+          <div class="pt-12 space-y-4">
+             <div class="rounded-3xl overflow-hidden shadow-xl aspect-[3/4]">
+              <img src="/cultural_fest_college_1773404969735.png" alt="Cultural Fest" class="w-full h-full object-cover">
+            </div>
+            <div class="rounded-3xl overflow-hidden shadow-xl aspect-square bg-slate-900 flex items-center justify-center p-8 text-brand-500">
+               <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-7.714 2.143L11 21l-2.286-6.857L1 12l7.714-2.143L11 3z"></path></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="w-full md:w-1/2">
+          <h2 class="text-brand-600 font-semibold tracking-[0.2em] uppercase text-xs mb-4">Student Life</h2>
+          <h3 class="text-4xl md:text-5xl font-black text-slate-900 leading-tight mb-8">Beyond the <br/><span class="text-gradient">Classroom.</span></h3>
+          <p class="text-slate-600 font-light text-lg leading-relaxed mb-10">
+            Education at Sree Narayana is more than just textbooks. We foster a community where creativity, leadership, and personal growth are celebrated through sports, cultural fests, and social clubs.
+          </p>
+          <ul class="space-y-6">
+            <li class="flex items-center gap-4 group">
+              <div class="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-brand-600 group-hover:bg-brand-600 group-hover:text-white transition-all">
+                <span class="text-xs font-bold">01</span>
+              </div>
+              <span class="text-slate-800 font-bold tracking-tight">Vibrant Campus Clubs & Hobby Groups</span>
+            </li>
+            <li class="flex items-center gap-4 group">
+              <div class="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-brand-600 group-hover:bg-brand-600 group-hover:text-white transition-all">
+                <span class="text-xs font-bold">02</span>
+              </div>
+              <span class="text-slate-800 font-bold tracking-tight">Annual Sports Meet & Inter-College Competitions</span>
+            </li>
+            <li class="flex items-center gap-4 group">
+              <div class="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-brand-600 group-hover:bg-brand-600 group-hover:text-white transition-all">
+                <span class="text-xs font-bold">03</span>
+              </div>
+              <span class="text-slate-800 font-bold tracking-tight">Community Service & Healthcare Outreach</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Why Choose Us / Value Proposition -->
@@ -388,64 +447,7 @@
   </section>
 
 
-  <!-- Beyond Academics / Campus Life Section -->
-  <section class="py-32 relative bg-slate-50 overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row gap-16 items-center">
-        <!-- Image Collage -->
-        <div class="w-full md:w-1/2 grid grid-cols-2 gap-4">
-          <div class="space-y-4">
-            <div class="rounded-3xl overflow-hidden shadow-xl aspect-square">
-              <img src="/campus_engagement_students_1773404944931.png" alt="Student Life" class="w-full h-full object-cover">
-            </div>
-            <div class="rounded-3xl overflow-hidden shadow-xl aspect-[3/4] bg-brand-600 flex items-center justify-center p-8 text-white">
-              <div>
-                <div class="text-4xl font-black mb-2">50+</div>
-                <div class="text-[10px] uppercase tracking-widest font-bold opacity-80">Annual Events & Cultural Activities</div>
-              </div>
-            </div>
-          </div>
-          <div class="pt-12 space-y-4">
-             <div class="rounded-3xl overflow-hidden shadow-xl aspect-[3/4]">
-              <img src="/cultural_fest_college_1773404969735.png" alt="Cultural Fest" class="w-full h-full object-cover">
-            </div>
-            <div class="rounded-3xl overflow-hidden shadow-xl aspect-square bg-slate-900 flex items-center justify-center p-8 text-brand-500">
-               <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-7.714 2.143L11 21l-2.286-6.857L1 12l7.714-2.143L11 3z"></path></svg>
-            </div>
-          </div>
-        </div>
 
-        <!-- Content -->
-        <div class="w-full md:w-1/2">
-          <h2 class="text-brand-600 font-semibold tracking-[0.2em] uppercase text-xs mb-4">Student Life</h2>
-          <h3 class="text-4xl md:text-5xl font-black text-slate-900 leading-tight mb-8">Beyond the <br/><span class="text-gradient">Classroom.</span></h3>
-          <p class="text-slate-600 font-light text-lg leading-relaxed mb-10">
-            Education at Sree Narayana is more than just textbooks. We foster a community where creativity, leadership, and personal growth are celebrated through sports, cultural fests, and social clubs.
-          </p>
-          <ul class="space-y-6">
-            <li class="flex items-center gap-4 group">
-              <div class="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-brand-600 group-hover:bg-brand-600 group-hover:text-white transition-all">
-                <span class="text-xs font-bold">01</span>
-              </div>
-              <span class="text-slate-800 font-bold tracking-tight">Vibrant Campus Clubs & Hobby Groups</span>
-            </li>
-            <li class="flex items-center gap-4 group">
-              <div class="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-brand-600 group-hover:bg-brand-600 group-hover:text-white transition-all">
-                <span class="text-xs font-bold">02</span>
-              </div>
-              <span class="text-slate-800 font-bold tracking-tight">Annual Sports Meet & Inter-College Competitions</span>
-            </li>
-            <li class="flex items-center gap-4 group">
-              <div class="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-brand-600 group-hover:bg-brand-600 group-hover:text-white transition-all">
-                <span class="text-xs font-bold">03</span>
-              </div>
-              <span class="text-slate-800 font-bold tracking-tight">Community Service & Healthcare Outreach</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Client Reviews Section -->
   <section class="py-32 relative bg-white overflow-hidden">
@@ -534,9 +536,9 @@
     </div>
 
     <div class="relative z-10 text-center max-w-4xl mx-auto px-4">
-       <div class="inline-flex items-center justify-center w-20 h-20 rounded-2xl glass mb-8 rotate-3 border border-slate-200">
+       <!-- <div class="inline-flex items-center justify-center w-20 h-20 rounded-2xl glass mb-8 rotate-3 border border-slate-200">
          <svg class="w-10 h-10 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-       </div>
+       </div> -->
        <h2 class="text-[clamp(2.5rem,5vw,5rem)] font-black text-slate-900 leading-[1.1] mb-8 tracking-tight">
          Ready to Answer <br/> <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-accent-600">The Calling.</span>
        </h2>
