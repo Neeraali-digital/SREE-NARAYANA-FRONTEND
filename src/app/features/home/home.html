@@ -1,555 +1,423 @@
-<div class="bg-white min-h-[200vh] text-slate-800">
+<div class="bg-brand-cream min-h-screen text-brand-navy selection:bg-brand-gold selection:text-brand-navy">
   
-  <!-- Hero Section -->
-  <section class="relative min-h-[90vh] flex items-center pt-28 pb-8 overflow-hidden py-12">
-    <!-- Abstract Ambient Glow Background -->
-    <div class="absolute inset-0 z-0 select-none overflow-hidden">
-        <div class="absolute top-[20%] left-[10%] w-[500px] h-[500px] bg-brand-500/10 rounded-full blur-[120px] animate-blob mix-blend-multiply"></div>
-        <div class="absolute top-[40%] right-[10%] w-[400px] h-[400px] bg-accent-400/10 rounded-full blur-[100px] animate-blob animation-delay-2000 mix-blend-multiply"></div>
-        <div class="absolute bottom-[-10%] left-[40%] w-[600px] h-[600px] bg-brand-600/10 rounded-full blur-[150px] animate-blob animation-delay-4000 mix-blend-multiply"></div>
-        
-        <!-- Subtle Pattern Overlay -->
-        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-[0.03]"></div>
+  <!-- Modern Hero Section -->
+  <section class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-gradient-navy">
+    <!-- Abstract Background Elements -->
+    <div class="absolute inset-0 z-0 opacity-20">
+      <div class="absolute top-[10%] left-[5%] w-[600px] h-[600px] bg-brand-gold/20 rounded-full blur-[120px] animate-pulse"></div>
+      <div class="absolute bottom-[10%] right-[5%] w-[500px] h-[500px] bg-brand-burgundy/20 rounded-full blur-[100px] animate-pulse"></div>
+      <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10"></div>
     </div>
     
-    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col md:flex-row items-center justify-between gap-12">
-      
-      <!-- Typography Side -->
-      <div class="md:w-[55%] flex flex-col items-start pt-16 md:pt-0">
-        <!-- <div class="inline-flex items-center gap-2 px-4 py-2 mt-12 md:mt-0 rounded-full glass mb-8 border border-brand-500/20 text-xs font-bold tracking-[0.2em] text-brand-600 uppercase shadow-[0_0_15px_rgba(225,29,72,0.1)] backdrop-blur-3xl overflow-hidden group">
-            <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse delay-75"></span>
-            Admission Open 2026-2027
-            <div class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-brand-500/10 to-transparent -translate-x-full group-hover:animate-[shimmer_2s_infinite]"></div>
-        </div> -->
-
-        <h1 #heroTitle class="text-[clamp(2.8rem,7vw,4.8rem)] font-black leading-[0.9] tracking-tighter mb-6 overflow-hidden">
-          <div class="relative">
-            <span class="block text-slate-900">ADMISSION OPEN</span>
-            <span class="block text-slate-400">BATCH 2026-2027</span>
-            <span class="block bg-clip-text text-transparent bg-gradient-to-r from-brand-500 via-brand-600 to-accent-500 pb-1">JOIN OUR COLLEGE.</span>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-16">
+        <!-- Text Content -->
+        <div class="lg:w-1/2 space-y-8 animate-fade-in-up">
+          <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full glass border border-white/10 text-white">
+            <!-- <span class="w-2 h-2 rounded-full bg-brand-gold animate-ping"></span> -->
+            <span class="text-[10px] font-bold uppercase tracking-[0.3em]">Admission Open 2026-27</span>
           </div>
-        </h1>
-
-        <div #heroSubtitle class="max-w-xl">
-           <p class="text-lg md:text-xl text-slate-600 font-light leading-relaxed mb-6 border-l-2 border-brand-500 pl-6">
-            Embark on a journey of excellence. Choose a life of care and confidence. Focus on a future that sees SUCCESS.
-          </p>
-          <p class="text-sm text-slate-500 font-medium mb-10 italic">
-            "Behind every medicine, there’s a Nurse. Where Science meets Precision."
-          </p>
-          <div class="flex flex-col sm:flex-row gap-5">
-             <a routerLink="/programs" class="relative inline-flex items-center justify-center px-8 py-4 overflow-hidden font-bold tracking-tighter text-white bg-brand-600 rounded-2xl group shadow-lg shadow-brand-600/20 hover:shadow-brand-600/40 transition-shadow">
-              <span class="absolute w-0 h-0 transition-all duration-500 ease-out bg-brand-700 rounded-full group-hover:w-[150%] group-hover:h-56"></span>
-              <span class="relative transition-colors flex items-center">
-                 Our Programs <svg class="w-5 h-5 ml-2 -mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-              </span>
-            </a>
-            <a routerLink="/about" class="inline-flex items-center justify-center px-8 py-4 font-bold tracking-tighter text-slate-700 rounded-2xl glass hover:bg-slate-50 transition-colors group border border-slate-200">
-              Learn More <span class="group-hover:translate-x-1 ml-2 transition-transform">→</span>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Hero Visual Side -->
-      <div class="md:w-[45%] relative mt-12 md:mt-0 h-[350px] md:h-[450px] flex items-center justify-center">
           
-          <!-- Orbits & Glows -->
-          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] border border-slate-100 rounded-full animate-[spin_40s_linear_infinite] opacity-50"></div>
-          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-[90%] border border-brand-500/10 rounded-full animate-[spin_30s_linear_reverse_infinite] border-dashed"></div>
-
-          <!-- Central Main Display -->
-          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] h-[300px] md:w-[280px] md:h-[400px] glass-card overflow-hidden group z-20 shadow-2xl transition-all duration-700">
-             <div class="absolute inset-0 bg-gradient-to-tr from-brand-600/20 to-transparent z-10"></div>
-             <img src="nursing_college_hero_main_1773316058551.png" alt="Nursing Student Excellence" class="parallax-img w-full h-full object-cover group-hover:scale-110 transition-all duration-1000">
-             
-             <!-- Minimal UI Overlay -->
-             <div class="absolute top-4 left-4 right-4 flex justify-between items-start z-20">
-               <div class="flex flex-col gap-3">
-                 <div class="flex gap-1.5">
-                   <span class="w-1.5 h-1.5 rounded-full bg-brand-500"></span>
-                   <span class="w-1.5 h-1.5 rounded-full bg-accent-500"></span>
-                   <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
-                 </div>
-                 <img src="SN logo black.png" alt="Logo" class="w-8 h-8 object-contain">
-               </div>
-               <span class="text-[8px] font-mono tracking-widest text-brand-600 uppercase font-bold">Est. 1998</span>
-             </div>
-             <div class="absolute bottom-6 left-6 z-20">
-               <p class="text-sm font-bold text-white tracking-wider mb-0.5 drop-shadow-md">Clinical Proficiency</p>
-               <div class="w-12 h-0.5 bg-brand-500"></div>
-             </div>
+          <h1 class="text-[clamp(3rem,8vw,5.5rem)] font-black leading-[0.95] tracking-tighter text-white">
+            Building an <br/>
+            <span class="text-brand-gold">Equal Society</span> <br/>
+            Through Education.
+          </h1>
+          
+          <p class="text-lg text-white/70 max-w-xl font-light leading-relaxed border-l-2 border-brand-gold pl-6">
+            Inspired by the timeless vision of Sree Narayana Guru, we commit to building an enlightened society through inclusive, value-based healthcare education.
+          </p>
+          
+          <div class="flex flex-wrap gap-5 pt-4">
+            <a routerLink="/programs" class="group relative px-8 py-4 bg-brand-gold text-brand-navy font-bold rounded-xl overflow-hidden shadow-2xl shadow-brand-gold/20 transition-all hover:scale-105 active:scale-95">
+              <span class="relative z-10">Our Programs</span>
+              <div class="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+            </a>
+            <a routerLink="/about" class="px-8 py-4 glass text-white font-bold rounded-xl border border-white/10 hover:bg-white/5 transition-all">
+              Learn More
+            </a>
           </div>
-
-          <!-- Floating Satellite 1 -->
-          <div class="absolute top-[10%] left-[-10%] md:left-[-5%] w-32 h-32 md:w-44 md:h-44 glass-card p-1 rounded-2xl z-30 animate-float group hover:z-50 border-brand-500/10">
-             <div class="w-full h-full rounded-xl overflow-hidden relative">
-               <img src="nursing_student_training_1773316096563.png" alt="Collaborative Training" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
-             </div>
+          
+          <!-- Motto -->
+          <div class="flex items-center gap-6 pt-12 border-t border-white/10">
+            <div class="space-y-1">
+              <span class="block text-[12px] uppercase tracking-widest text-brand-gold font-bold">Our Values</span>
+              <div class="flex gap-4 py-5">
+                <span class="text-xs font-black text-white/40 uppercase">Humanity</span>
+                <span class="text-xs font-black text-white/40 uppercase">Education</span>
+                <span class="text-xs font-black text-white/40 uppercase">Purpose</span>
+                <span class="text-xs font-black text-brand-gold uppercase">Service</span>
+              </div>
+            </div>
           </div>
-
-          <!-- Floating Satellite 2 -->
-          <div class="absolute bottom-[10%] right-[-10%] md:right-[-5%] w-40 h-28 md:w-56 md:h-36 glass-card p-1.5 rounded-2xl z-30 animate-[float_7s_ease-in-out_infinite_reverse] group hover:z-50 border-accent-500/10">
-             <div class="w-full h-full rounded-xl overflow-hidden relative">
-               <img src="nursing_simulation_manikin_1773316118135.png" alt="Advanced Simulation" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
-             </div>
+        </div>
+        
+        <!-- Hero Visual -->
+        <div class="lg:w-1/2 relative">
+          <div class="relative z-10 rounded-[3rem] overflow-hidden border-8 border-white/5 shadow-2xl transform rotate-2 group hover:rotate-0 transition-all duration-700">
+            <img src="clinical_exposure_hospital_1773404378546.png" alt="Clinical Excellence" class="w-full h-[600px] object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-navy via-transparent to-transparent"></div>
+            
+            <!-- Floating Badge -->
+            <div class="absolute bottom-10 left-10 glass-card p-6 flex items-center gap-4 animate-float">
+              <div class="w-12 h-12 rounded-full bg-brand-gold flex items-center justify-center text-brand-navy">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+              </div>
+              <div class="text-white">
+                <h4 class="text-sm font-bold">INC Recognized</h4>
+                <p class="text-[10px] opacity-60">Premier Healthcare Education</p>
+              </div>
+            </div>
           </div>
+          
+          <!-- Background Decoration -->
+          <div class="absolute -top-10 -right-10 w-64 h-64 bg-brand-gold/10 rounded-full blur-3xl -z-10 animate-blob"></div>
+          <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-brand-burgundy/10 rounded-full blur-3xl -z-10 animate-blob animation-delay-2000"></div>
+        </div>
       </div>
-      
     </div>
     
-    <!-- Scroll Down indicator -->
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center animate-bounce z-20 opacity-30">
-        <span class="text-[10px] uppercase font-bold tracking-[0.3em] mb-2 font-inter text-slate-900">Scroll</span>
-        <div class="w-[1px] h-12 bg-gradient-to-b from-brand-500 to-transparent"></div>
+    <!-- Wave Separator -->
+    <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative block w-[calc(110%+1.3px)] h-[100px] fill-brand-cream">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
+        </svg>
     </div>
   </section>
 
-  <!-- Giant Statistics -->
-  <section #statsSection class="relative py-32 z-20 bg-white border-y border-slate-100">
-     <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.02]"></div>
-     
-     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-4 divide-y md:divide-y-0 md:divide-x divide-slate-100">
-            <div class="stat-item flex flex-col items-center justify-center pt-8 md:pt-0 p-6">
-                <div class="text-[clamp(3rem,5vw,5rem)] font-black text-transparent bg-clip-text bg-gradient-to-b from-brand-600 to-brand-800 leading-none mb-2">99%</div>
-                <div class="text-slate-500 font-bold uppercase tracking-[0.2em] text-xs">NCLEX Pass Rate</div>
-            </div>
-            <div class="stat-item flex flex-col items-center justify-center pt-8 md:pt-0 p-6">
-                <div class="text-[clamp(3rem,5vw,5rem)] font-black text-transparent bg-clip-text bg-gradient-to-b from-brand-600 to-brand-800 leading-none mb-2">60+</div>
-                <div class="text-slate-500 font-bold uppercase tracking-[0.2em] text-xs">Clinical Partners</div>
-            </div>
-             <div class="stat-item flex flex-col items-center justify-center pt-8 md:pt-0 p-6">
-                <div class="text-[clamp(3rem,5vw,5rem)] font-black text-transparent bg-clip-text bg-gradient-to-b from-brand-600 to-brand-800 leading-none mb-2 text-center">Top 5</div>
-                <div class="text-slate-500 font-bold uppercase tracking-[0.2em] text-xs">National Rank</div>
-            </div>
-            <div class="stat-item flex flex-col items-center justify-center pt-8 md:pt-0 p-6">
-                <div class="text-[clamp(3rem,5vw,5rem)] font-black text-transparent bg-clip-text bg-gradient-to-b from-brand-600 to-brand-800 leading-none mb-2">1:8</div>
-                <div class="text-slate-500 font-bold uppercase tracking-[0.2em] text-xs">Faculty Ratio</div>
-            </div>
-        </div>
-     </div>
-  </section>
-
-  <!-- Beyond Academics / Campus Life Section -->
-  <section class="py-32 relative bg-slate-50 overflow-hidden">
+  <!-- Vision & Mission Section -->
+  <section class="py-32 bg-brand-cream relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row gap-16 items-center">
-        <!-- Image Collage -->
-        <div class="w-full md:w-1/2 grid grid-cols-2 gap-4">
-          <div class="space-y-4">
-            <div class="rounded-3xl overflow-hidden shadow-xl aspect-square">
-              <img src="/campus_engagement_students_1773404944931.png" alt="Student Life" class="w-full h-full object-cover">
-            </div>
-            <div class="rounded-3xl overflow-hidden shadow-xl aspect-[3/4] bg-brand-600 flex items-center justify-center p-8 text-white">
-              <div>
-                <div class="text-4xl font-black mb-2">50+</div>
-                <div class="text-[10px] uppercase tracking-widest font-bold opacity-80">Annual Events & Cultural Activities</div>
+      <div class="grid lg:grid-cols-2 gap-20 items-center">
+        <!-- Vision Content -->
+        <div class="relative">
+          <div class="absolute -top-12 -left-12 text-[12rem] font-black text-brand-navy/5 leading-none select-none">VISION</div>
+          <div class="relative z-10 space-y-6">
+            <h2 class="text-brand-burgundy font-bold tracking-widest text-xs uppercase">Our Guiding Light</h2>
+            <h3 class="text-4xl md:text-5xl font-black text-brand-navy">The Vision of <br/><span class="text-brand-gold">Sree Narayana.</span></h3>
+            <p class="text-brand-navy/70 leading-relaxed text-lg font-light italic">
+              "One Caste, One Religion, One God for humankind."
+            </p>
+            <p class="text-brand-navy/80 leading-relaxed">
+              At Sree Narayana Group of Institutions, our mission is deeply inspired by the teachings of Sree Narayana Guru, who believed that education is the strongest force for social transformation. We strive to nurture ethical professionals who serve humanity with compassion and competence.
+            </p>
+            <div class="pt-8">
+              <div class="bg-white p-4 inline-block rounded-3xl shadow-xl border border-brand-navy/5">
+                <!-- Using logo or relevant image as reference -->
+                <img src="sree.jpg" alt="Sree Narayana Guru" class="w-56 h-56 object-cover rounded-2xl grayscale hover:grayscale-0 transition-all duration-700">
               </div>
             </div>
           </div>
-          <div class="pt-12 space-y-4">
-             <div class="rounded-3xl overflow-hidden shadow-xl aspect-[3/4]">
-              <img src="/cultural_fest_college_1773404969735.png" alt="Cultural Fest" class="w-full h-full object-cover">
+        </div>
+        
+        <!-- Mission & Info Boxes -->
+        <div class="space-y-8">
+          <div class="bg-brand-navy p-10 rounded-[3rem] text-white shadow-2xl">
+            <h4 class="text-brand-gold font-bold uppercase tracking-widest text-xs mb-4">Our Mission</h4>
+            <p class="text-white/80 leading-relaxed font-light text-lg">
+              Through academic excellence, community engagement, and a strong focus on healthcare education, we aim to transform students into responsible citizens and compassionate caregivers who contribute meaningfully to society and the nation.
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-2 gap-6">
+            <div class="bg-white p-8 rounded-3xl shadow-lg border border-brand-navy/5 group hover:bg-brand-gold transition-all duration-500">
+              <div class="text-3xl font-black text-brand-navy mb-2 group-hover:text-white">99%</div>
+              <p class="text-[10px] font-bold uppercase tracking-widest text-brand-navy/50 group-hover:text-white/70">Success Rate</p>
             </div>
-            <div class="rounded-3xl overflow-hidden shadow-xl aspect-square bg-slate-900 flex items-center justify-center p-8 text-brand-500">
-               <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-7.714 2.143L11 21l-2.286-6.857L1 12l7.714-2.143L11 3z"></path></svg>
+            <div class="bg-white p-8 rounded-3xl shadow-lg border border-brand-navy/5 group hover:bg-brand-burgundy transition-all duration-500">
+              <div class="text-3xl font-black text-brand-navy mb-2 group-hover:text-white">25+</div>
+              <p class="text-[10px] font-bold uppercase tracking-widest text-brand-navy/50 group-hover:text-white/70">Partners</p>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Chairman's Message -->
+  <section class="py-32 bg-white relative overflow-hidden">
+    <!-- Grid Pattern -->
+    <div class="absolute inset-0 opacity-[0.03] bg-[url('https://www.transparenttextures.com/patterns/grid-me.png')]"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="bg-brand-cream/50 rounded-[4rem] p-8 md:p-16 border border-brand-navy/5 flex flex-col lg:flex-row gap-16 items-center">
+        <!-- Photo -->
+        <div class="lg:w-1/3 relative">
+          <div class="w-full aspect-[4/5] bg-brand-navy rounded-[3rem] overflow-hidden shadow-2xl relative">
+             <div class="absolute inset-0 flex items-center justify-center text-white/10 italic">Chairman's Photo</div>
+          </div>
+          <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-brand-gold rounded-[2rem] flex items-center justify-center text-brand-navy shadow-xl border-4 border-white">
+            <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21L14.017 18C14.017 16.8954 13.1216 16 12.017 16H9.01703C7.91246 16 7.01703 16.8954 7.01703 18V21H14.017ZM21.017 21V18C21.017 14.6863 18.3307 12 15.017 12H6.01703C2.70332 12 0.0170288 14.6863 0.0170288 18V21H21.017ZM10.517 10C12.7262 10 14.517 8.20914 14.517 6C14.517 3.79086 12.7262 2 10.517 2C8.30789 2 6.51703 3.79086 6.51703 6C6.51703 8.20914 8.30789 10 10.517 10Z"/></svg>
+          </div>
+        </div>
+        
         <!-- Content -->
-        <div class="w-full md:w-1/2">
-          <h2 class="text-brand-600 font-semibold tracking-[0.2em] uppercase text-xs mb-4">Student Life</h2>
-          <h3 class="text-4xl md:text-5xl font-black text-slate-900 leading-tight mb-8">Beyond the <br/><span class="text-gradient">Classroom.</span></h3>
-          <p class="text-slate-600 font-light text-lg leading-relaxed mb-10">
-            Education at Sree Narayana is more than just textbooks. We foster a community where creativity, leadership, and personal growth are celebrated through sports, cultural fests, and social clubs.
+        <div class="lg:w-2/3 space-y-8">
+          <div class="inline-block px-4 py-1.5 bg-brand-burgundy text-white text-[10px] font-bold uppercase tracking-widest rounded-full">Chairman's Message</div>
+          <h3 class="text-4xl font-black text-brand-navy">Inspiring a Brighter <span class="text-brand-gold">Future.</span></h3>
+          <p class="text-lg text-brand-navy/80 font-light leading-relaxed">
+            "In the modern era, education is the most powerful and indispensable tool for personal and social transformation. Our vision is to ensure equal opportunities for every student, especially those who are socially and financially underprivileged. Let education be the light that guides you to serve humanity and build a successful global career."
           </p>
-          <ul class="space-y-6">
-            <li class="flex items-center gap-4 group">
-              <div class="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-brand-600 group-hover:bg-brand-600 group-hover:text-white transition-all">
-                <span class="text-xs font-bold">01</span>
-              </div>
-              <span class="text-slate-800 font-bold tracking-tight">Vibrant Campus Clubs & Hobby Groups</span>
-            </li>
-            <li class="flex items-center gap-4 group">
-              <div class="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-brand-600 group-hover:bg-brand-600 group-hover:text-white transition-all">
-                <span class="text-xs font-bold">02</span>
-              </div>
-              <span class="text-slate-800 font-bold tracking-tight">Annual Sports Meet & Inter-College Competitions</span>
-            </li>
-            <li class="flex items-center gap-4 group">
-              <div class="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-brand-600 group-hover:bg-brand-600 group-hover:text-white transition-all">
-                <span class="text-xs font-bold">03</span>
-              </div>
-              <span class="text-slate-800 font-bold tracking-tight">Community Service & Healthcare Outreach</span>
-            </li>
-          </ul>
+          <div class="pt-4">
+             <h5 class="text-xl font-bold text-brand-navy">Founder / Chairman</h5>
+             <p class="text-sm text-brand-navy/50">Sree Narayana Group of Institutions</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Why Choose Us / Value Proposition -->
-  <section class="py-32 relative bg-slate-50 overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="text-center mb-24">
-        <h2 class="text-brand-600 font-semibold tracking-[0.2em] uppercase text-xs mb-4">Elite Excellence</h2>
-        <h3 class="text-4xl md:text-5xl font-black text-slate-900 leading-tight">Why Sree Narayana <br/><span class="text-gradient">is Different.</span></h3>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-12">
-        <div class="glass-card p-10 bg-white border-slate-100 hover:shadow-2xl transition-all group">
-          <div class="w-14 h-14 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center mb-8 group-hover:bg-brand-600 group-hover:text-white transition-all">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.691.346a6 6 0 01-3.86.517l-2.388-.477a2 2 0 00-1.022.547l-1.16 1.16a2 2 0 002.828 2.828l1.16-1.16a2 2 0 00.547-1.022l.477-2.387a6 6 0 00-.517-3.86l-.346-.691a6 6 0 00-.517-3.86l.477-2.388a2 2 0 00-.547-1.022l-1.16-1.16a2 2 0 00-2.828 2.828l1.16 1.16z"></path></svg>
-          </div>
-          <h4 class="text-xl font-bold text-slate-900 mb-4">Clinical Mastery</h4>
-          <p class="text-slate-500 font-light text-sm leading-relaxed">Early exposure to real-world clinical environments with mentorship from industry-leading healthcare professionals.</p>
-        </div>
-
-        <div class="glass-card p-10 bg-white border-slate-100 hover:shadow-2xl transition-all group md:-translate-y-8">
-          <div class="w-14 h-14 rounded-2xl bg-accent-50 text-accent-600 flex items-center justify-center mb-8 group-hover:bg-accent-600 group-hover:text-white transition-all">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.364-6.364l-.707-.707M6.364 17.636l-.707.707M12 21v-1m0-5a5 5 0 110-10 5 5 0 010 10z"></path></svg>
-          </div>
-          <h4 class="text-xl font-bold text-slate-900 mb-4">Innovative Pedagogy</h4>
-          <p class="text-slate-500 font-light text-sm leading-relaxed">Our curriculum blends traditional medical ethics with modern AI-driven simulation and diagnostic technologies.</p>
-        </div>
-
-        <div class="glass-card p-10 bg-white border-slate-100 hover:shadow-xl transition-all group">
-          <div class="w-14 h-14 rounded-2xl bg-green-50 text-green-600 flex items-center justify-center mb-8 group-hover:bg-green-600 group-hover:text-white transition-all">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 002 2 2 2 0 012 2v.5m.5 5.605a9 9 0 1111.458-12.912"></path></svg>
-          </div>
-          <h4 class="text-xl font-bold text-slate-900 mb-4">Global Reach</h4>
-          <p class="text-slate-500 font-light text-sm leading-relaxed">100% placement track record with partners spanning across UK, Germany, UAE, and Tier-1 Indian hospitals.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- Programs Overview -->
-  <section class="py-32 relative overflow-hidden bg-slate-50">
-    <div class="absolute -top-[300px] left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-brand-500/5 rounded-full blur-[150px] pointer-events-none"></div>
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      
-      <div class="flex flex-col md:flex-row justify-between items-end mb-20">
-        <div class="max-w-2xl">
-           <h2 class="text-brand-600 font-semibold tracking-[0.2em] uppercase text-xs mb-4 flex items-center gap-4">
-             <span class="w-12 h-[1px] bg-brand-500"></span> Curriculum
-           </h2>
-           <h3 class="text-4xl md:text-5xl font-black text-slate-900 leading-tight">Mastering The Art & Science of Care.</h3>
-        </div>
-        <a routerLink="/programs" class="hidden md:inline-flex items-center text-slate-600 hover:text-brand-600 font-bold tracking-widest text-sm uppercase group transition-colors">
-          View All Degrees <span class="block w-8 h-[1px] bg-slate-300 ml-4 group-hover:w-16 group-hover:bg-brand-500 transition-all"></span>
-        </a>
-      </div>
-
-      <!-- Categorized Programs Grid -->
-      <div class="space-y-20">
-        <!-- Nursing Programs -->
-        <div>
-          <h4 class="text-xl font-bold text-slate-900 mb-10 flex items-center gap-3">
-            <span class="w-8 h-8 rounded-lg bg-brand-500/10 text-brand-600 flex items-center justify-center">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-10V4m0 10V4m-4 10V4"></path></svg>
-            </span>
-            Nursing Programs
-          </h4>
-          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- GNM -->
-            <div class="glass-card p-6 bg-white border-slate-100 hover:border-brand-500/20 transition-all group">
-              <h5 class="text-lg font-black text-slate-900 mb-2 group-hover:text-brand-600 transition-colors">G.N.M</h5>
-              <p class="text-xs text-slate-500 mb-4">General Nursing & Midwifery</p>
-              <div class="flex items-center justify-between mt-auto pt-4 border-t border-slate-50">
-                <span class="text-[10px] font-bold text-brand-600 uppercase tracking-widest">3 Years</span>
-                <span class="w-6 h-6 rounded-full bg-slate-50 text-slate-400 flex items-center justify-center text-xs group-hover:bg-brand-500 group-hover:text-white transition-all">→</span>
-              </div>
-            </div>
-            <!-- BSc Nursing -->
-            <div class="glass-card p-6 bg-white border-slate-100 hover:border-brand-500/20 transition-all group">
-              <h5 class="text-lg font-black text-slate-900 mb-2 group-hover:text-brand-600 transition-colors">B.Sc Nursing</h5>
-              <p class="text-xs text-slate-500 mb-4">Bachelor of Science in Nursing</p>
-              <div class="flex items-center justify-between mt-auto pt-4 border-t border-slate-50">
-                <span class="text-[10px] font-bold text-brand-600 uppercase tracking-widest">4 Years</span>
-                <span class="w-6 h-6 rounded-full bg-slate-50 text-slate-400 flex items-center justify-center text-xs group-hover:bg-brand-500 group-hover:text-white transition-all">→</span>
-              </div>
-            </div>
-            <!-- PB BSc Nursing -->
-            <div class="glass-card p-6 bg-white border-slate-100 hover:border-brand-500/20 transition-all group">
-              <h5 class="text-lg font-black text-slate-900 mb-2 group-hover:text-brand-600 transition-colors">PB.B.Sc Nursing</h5>
-              <p class="text-xs text-slate-500 mb-4">Post Basic B.Sc Nursing</p>
-              <div class="flex items-center justify-between mt-auto pt-4 border-t border-slate-50">
-                <span class="text-[10px] font-bold text-brand-600 uppercase tracking-widest">2 Years</span>
-                <span class="w-6 h-6 rounded-full bg-slate-50 text-slate-400 flex items-center justify-center text-xs group-hover:bg-brand-500 group-hover:text-white transition-all">→</span>
-              </div>
-            </div>
-            <!-- MSc Nursing -->
-            <div class="glass-card p-6 bg-white border-slate-100 hover:border-brand-500/20 transition-all group">
-              <h5 class="text-lg font-black text-slate-900 mb-2 group-hover:text-brand-600 transition-colors">M.Sc Nursing</h5>
-              <p class="text-xs text-slate-500 mb-4">Master of Science in Nursing</p>
-              <div class="flex items-center justify-between mt-auto pt-4 border-t border-slate-50">
-                <span class="text-[10px] font-bold text-brand-600 uppercase tracking-widest">2 Years</span>
-                <span class="w-6 h-6 rounded-full bg-slate-50 text-slate-400 flex items-center justify-center text-xs group-hover:bg-brand-500 group-hover:text-white transition-all">→</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Allied Health Sciences -->
-        <div>
-          <h4 class="text-xl font-bold text-slate-900 mb-10 flex items-center gap-3">
-            <span class="w-8 h-8 rounded-lg bg-accent-500/10 text-accent-600 flex items-center justify-center">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-            </span>
-            Allied Health Sciences
-          </h4>
-          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- BSc AT-OT -->
-            <div class="glass-card p-6 bg-white border-slate-100 hover:border-accent-500/20 transition-all group relative">
-              <div class="absolute top-4 right-4 bg-accent-100 text-accent-700 text-[8px] font-black px-2 py-1 rounded-full uppercase tracking-tighter">Lateral Entry</div>
-              <h5 class="text-lg font-black text-slate-900 mb-2 group-hover:text-accent-600 transition-colors">B.Sc AT-OT</h5>
-              <p class="text-xs text-slate-500 mb-4">Anaesthesia & Operation Theatre Tech</p>
-              <div class="flex items-center justify-between mt-auto pt-4 border-t border-slate-50">
-                <span class="text-[10px] font-bold text-accent-700 uppercase tracking-widest">3+1 Years</span>
-                <span class="w-6 h-6 rounded-full bg-slate-50 text-slate-400 flex items-center justify-center text-xs group-hover:bg-accent-500 group-hover:text-white transition-all">→</span>
-              </div>
-            </div>
-            <!-- BSc Optometry -->
-            <div class="glass-card p-6 bg-white border-slate-100 hover:border-accent-500/20 transition-all group relative">
-              <div class="absolute top-4 right-4 bg-accent-100 text-accent-700 text-[8px] font-black px-2 py-1 rounded-full uppercase tracking-tighter">Lateral Entry</div>
-              <h5 class="text-lg font-black text-slate-900 mb-2 group-hover:text-accent-600 transition-colors">B.Sc Optometry</h5>
-              <p class="text-xs text-slate-500 mb-4">Bachelor of Optometry</p>
-              <div class="flex items-center justify-between mt-auto pt-4 border-t border-slate-50">
-                <span class="text-[10px] font-bold text-accent-700 uppercase tracking-widest">4 Years</span>
-                <span class="w-6 h-6 rounded-full bg-slate-50 text-slate-400 flex items-center justify-center text-xs group-hover:bg-accent-500 group-hover:text-white transition-all">→</span>
-              </div>
-            </div>
-            <!-- BSc MIT -->
-            <div class="glass-card p-6 bg-white border-slate-100 hover:border-accent-500/20 transition-all group relative">
-              <div class="absolute top-4 right-4 bg-accent-100 text-accent-700 text-[8px] font-black px-2 py-1 rounded-full uppercase tracking-tighter">Lateral Entry</div>
-              <h5 class="text-lg font-black text-slate-900 mb-2 group-hover:text-accent-600 transition-colors">B.Sc MIT</h5>
-              <p class="text-xs text-slate-500 mb-4">Medical Imaging Technology</p>
-              <div class="flex items-center justify-between mt-auto pt-4 border-t border-slate-50">
-                <span class="text-[10px] font-bold text-accent-700 uppercase tracking-widest">3+1 Years</span>
-                <span class="w-6 h-6 rounded-full bg-slate-50 text-slate-400 flex items-center justify-center text-xs group-hover:bg-accent-500 group-hover:text-white transition-all">→</span>
-              </div>
-            </div>
-            <!-- BSc MLT -->
-            <div class="glass-card p-6 bg-white border-slate-100 hover:border-accent-500/20 transition-all group relative">
-              <div class="absolute top-4 right-4 bg-accent-100 text-accent-700 text-[8px] font-black px-2 py-1 rounded-full uppercase tracking-tighter">Lateral Entry</div>
-              <h5 class="text-lg font-black text-slate-900 mb-2 group-hover:text-accent-600 transition-colors">B.Sc MLT</h5>
-              <p class="text-xs text-slate-500 mb-4">Medical Laboratory Technology</p>
-              <div class="flex items-center justify-between mt-auto pt-4 border-t border-slate-50">
-                <span class="text-[10px] font-bold text-accent-700 uppercase tracking-widest">3+1 Years</span>
-                <span class="w-6 h-6 rounded-full bg-slate-50 text-slate-400 flex items-center justify-center text-xs group-hover:bg-accent-500 group-hover:text-white transition-all">→</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Physiotherapy -->
-        <div>
-          <h4 class="text-xl font-bold text-slate-900 mb-10 flex items-center gap-3">
-            <span class="w-8 h-8 rounded-lg bg-green-500/10 text-green-600 flex items-center justify-center">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
-            </span>
-            Physiotherapy
-          </h4>
-          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- BPT -->
-            <div class="glass-card p-6 bg-white border-slate-100 hover:border-green-500/20 transition-all group">
-              <h5 class="text-lg font-black text-slate-900 mb-2 group-hover:text-green-600 transition-colors">BPT</h5>
-              <p class="text-xs text-slate-500 mb-4">Bachelor of Physiotherapy</p>
-              <div class="flex items-center justify-between mt-auto pt-4 border-t border-slate-50">
-                <span class="text-[10px] font-bold text-green-600 uppercase tracking-widest">4.5 Years</span>
-                <span class="w-6 h-6 rounded-full bg-slate-50 text-slate-400 flex items-center justify-center text-xs group-hover:bg-green-500 group-hover:text-white transition-all">→</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-  
-  <!-- Impact Stats Section -->
-  <section class="py-24 bg-slate-900 relative overflow-hidden">
-    <div class="absolute inset-0 opacity-10">
-      <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:40px_40px]"></div>
-    </div>
-    <div class="max-w-7xl mx-auto px-4 relative z-10">
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="text-center">
-          <div class="text-4xl md:text-5xl font-black text-brand-500 mb-2">10+</div>
-          <div class="text-xs font-bold text-slate-400 uppercase tracking-widest">Years of Excellence</div>
-        </div>
-        <div class="text-center">
-          <div class="text-4xl md:text-5xl font-black text-brand-500 mb-2">5000+</div>
-          <div class="text-xs font-bold text-slate-400 uppercase tracking-widest">Global Alumni</div>
-        </div>
-        <div class="text-center">
-          <div class="text-4xl md:text-5xl font-black text-brand-500 mb-2">100%</div>
-          <div class="text-xs font-bold text-slate-400 uppercase tracking-widest">Placement Record</div>
-        </div>
-        <div class="text-center">
-          <div class="text-4xl md:text-5xl font-black text-brand-500 mb-2">20+</div>
-          <div class="text-xs font-bold text-slate-400 uppercase tracking-widest">Clinical Partners</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Infrastructure & Life Section -->
-  <section class="py-32 bg-white relative">
+  <!-- Specialties Section -->
+  <section class="py-32 bg-brand-navy text-white relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-        <div class="max-w-2xl">
-          <h2 class="text-brand-600 font-semibold tracking-[0.2em] uppercase text-xs mb-4">World Class Environment</h2>
-          <h3 class="text-4xl md:text-5xl font-black text-slate-900 leading-tight">State-of-the-Art <br/><span class="text-gradient">Infrastructure.</span></h3>
-        </div>
-        <p class="text-slate-500 font-light max-w-sm">
-          We provide an ecosystem designed for high-performance learning, from advanced simulation labs to digital resource hubs.
-        </p>
+      <div class="text-center mb-20">
+        <h2 class="text-brand-gold font-bold uppercase tracking-widest text-xs mb-4">World-Class Campus</h2>
+        <h3 class="text-4xl md:text-5xl font-black">Our Specialties.</h3>
       </div>
-
+      
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Lab -->
-        <div class="group relative overflow-hidden rounded-3xl aspect-[4/5] shadow-2xl">
-          <img src="/campus_facility_lab_1773404343142.png" alt="Advanced Lab" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent"></div>
-          <div class="absolute bottom-8 left-8 right-8">
-            <h4 class="text-xl font-bold text-white mb-2">Simulation Labs</h4>
-            <p class="text-slate-300 text-xs font-light">Equipped with specialized mannequins and real-time clinical monitoring systems.</p>
+        <!-- Feature 1 -->
+        <div class="glass-card p-10 hover:bg-white/10 transition-all group">
+          <div class="w-12 h-12 rounded-2xl bg-brand-gold/20 text-brand-gold flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
           </div>
+          <h4 class="text-xl font-bold mb-3">Modern Library</h4>
+          <p class="text-white/60 text-sm font-light">Extensive collection of medical books, journals, and digital resources.</p>
         </div>
-
-        <!-- Library -->
-        <div class="group relative overflow-hidden rounded-3xl aspect-[4/5] shadow-2xl md:translate-y-12">
-          <img src="/campus_facility_library_1773404359783.png" alt="Digital Library" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent"></div>
-          <div class="absolute bottom-8 left-8 right-8">
-            <h4 class="text-xl font-bold text-white mb-2">Digital Library</h4>
-            <p class="text-slate-300 text-xs font-light">Access to thousands of international journals, medical databases, and quiet study zones.</p>
+        <!-- Feature 2 -->
+        <div class="glass-card p-10 hover:bg-white/10 transition-all group">
+          <div class="w-12 h-12 rounded-2xl bg-brand-gold/20 text-brand-gold flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-10V4m0 10V4m-4 10V4"></path></svg>
           </div>
+          <h4 class="text-xl font-bold mb-3">Placement Tie-up</h4>
+          <p class="text-white/60 text-sm font-light">Strong network with Tier-1 hospitals for global career opportunities.</p>
         </div>
-
-        <!-- Hospital -->
-        <div class="group relative overflow-hidden rounded-3xl aspect-[4/5] shadow-2xl">
-          <img src="/clinical_exposure_hospital_1773404378546.png" alt="Clinical Training" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent"></div>
-          <div class="absolute bottom-8 left-8 right-8">
-            <h4 class="text-xl font-bold text-white mb-2">Clinical Exposure</h4>
-            <p class="text-slate-300 text-xs font-light">Direct clinical rotation opportunities in our multi-specialty partner hospitals.</p>
+        <!-- Feature 3 -->
+        <div class="glass-card p-10 hover:bg-white/10 transition-all group">
+          <div class="w-12 h-12 rounded-2xl bg-brand-gold/20 text-brand-gold flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
           </div>
+          <h4 class="text-xl font-bold mb-3">Expert Faculty</h4>
+          <p class="text-white/60 text-sm font-light">Mentorship from experienced healthcare professionals and specialists.</p>
+        </div>
+        <!-- Feature 4 -->
+        <div class="glass-card p-10 hover:bg-white/10 transition-all group">
+          <div class="w-12 h-12 rounded-2xl bg-brand-gold/20 text-brand-gold flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"></path></svg>
+          </div>
+          <h4 class="text-xl font-bold mb-3">Smart Campus</h4>
+          <p class="text-white/60 text-sm font-light">Wi-fi enabled campus with digital learning enhancements.</p>
+        </div>
+        <!-- Feature 5 -->
+        <div class="glass-card p-10 hover:bg-white/10 transition-all group">
+          <div class="w-12 h-12 rounded-2xl bg-brand-gold/20 text-brand-gold flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.691.346a6 6 0 01-3.86.517l-2.388-.477a2 2 0 00-1.022.547l-1.16 1.16a2 2 0 002.828 2.828l1.16-1.16a2 2 0 00.547-1.022l.477-2.387a6 6 0 00-.517-3.86l-.346-.691a6 6 0 00-.517-3.86l.477-2.388a2 2 0 00-.547-1.022l-1.16-1.16a2 2 0 00-2.828 2.828l1.16 1.16z"></path></svg>
+          </div>
+          <h4 class="text-xl font-bold mb-3">Hi-Tech Labs</h4>
+          <p class="text-white/60 text-sm font-light">Advanced clinical simulation and diagnostics equipment.</p>
+        </div>
+        <!-- Feature 6 -->
+        <div class="glass-card p-10 hover:bg-white/10 transition-all group">
+          <div class="w-12 h-12 rounded-2xl bg-brand-gold/20 text-brand-gold flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
+          </div>
+          <h4 class="text-xl font-bold mb-3">Prime Location</h4>
+          <p class="text-white/60 text-sm font-light">Just 10 minutes from the railway station with full transport facilities.</p>
         </div>
       </div>
     </div>
   </section>
 
-
-
-
-  <!-- Client Reviews Section -->
-  <section class="py-32 relative bg-white overflow-hidden">
-
-     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="text-center mb-20">
-           <h2 class="text-brand-600 font-semibold tracking-[0.2em] uppercase text-xs mb-4">Testimonials</h2>
-           <h3 class="text-4xl md:text-5xl font-black text-slate-900">What Our Students Say</h3>
+  <!-- Courses Section (Brochure Content) -->
+  <section class="py-32 bg-brand-cream relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-end mb-20">
+        <div>
+          <h2 class="text-brand-burgundy font-bold uppercase tracking-widest text-xs mb-4">Nursing & Allied Sciences</h2>
+          <h3 class="text-4xl md:text-5xl font-black text-brand-navy">Excellence in <span class="text-brand-gold">Education.</span></h3>
+        </div>
+        <div class="hidden md:block">
+           <p class="text-brand-navy/50 text-sm font-medium italic">Empowering the next generation of healthcare leaders.</p>
+        </div>
+      </div>
+      
+      <!-- Academic Grid -->
+      <div class="grid grid-cols-1 gap-12">
+        
+        <!-- Category: Nursing -->
+        <div class="space-y-8">
+          <div class="flex items-center gap-4">
+             <span class="px-3 py-1 bg-brand-navy text-white text-[10px] font-bold rounded-lg uppercase tracking-widest">Nursing Programs</span>
+             <div class="flex-grow h-[1px] bg-brand-navy/10"></div>
+          </div>
+          
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- B.Sc Nursing -->
+            <div class="bg-white rounded-[2.5rem] p-1 shadow-xl hover:shadow-2xl transition-all group overflow-hidden border border-brand-navy/5">
+              <div class="p-8 space-y-4">
+                 <div class="flex justify-between items-start">
+                    <h4 class="text-2xl font-black text-brand-navy">B.Sc. Nursing</h4>
+                    <span class="text-[10px] font-bold text-brand-gold uppercase tracking-widest">4 Years</span>
+                 </div>
+                 <p class="text-brand-navy/60 text-sm leading-relaxed font-light">Comprehensive four-year program preparing graduates for clinical practice and midwifery.</p>
+                 <div class="pt-4 border-t border-brand-navy/5">
+                    <h5 class="text-[10px] uppercase font-black text-brand-navy/30 mb-3 tracking-widest">Career Prospects</h5>
+                    <div class="flex flex-wrap gap-2">
+                       <span class="px-3 py-1 bg-brand-cream text-brand-navy text-[9px] font-bold rounded-full">ICU Specialist</span>
+                       <span class="px-3 py-1 bg-brand-cream text-brand-navy text-[9px] font-bold rounded-full">OT Nurse</span>
+                       <span class="px-3 py-1 bg-brand-cream text-brand-navy text-[9px] font-bold rounded-full">Nursing Tutor</span>
+                    </div>
+                 </div>
+              </div>
+            </div>
+            <!-- GNM -->
+            <div class="bg-white rounded-[2.5rem] p-1 shadow-xl hover:shadow-2xl transition-all group overflow-hidden border border-brand-navy/5">
+              <div class="p-8 space-y-4">
+                 <div class="flex justify-between items-start">
+                    <h4 class="text-2xl font-black text-brand-navy">G.N.M</h4>
+                    <span class="text-[10px] font-bold text-brand-gold uppercase tracking-widest">3.5 Years</span>
+                 </div>
+                 <p class="text-brand-navy/60 text-sm leading-relaxed font-light">Focusing on practical clinical care, community health, and maternal nursing foundations.</p>
+                 <div class="pt-4 border-t border-brand-navy/5">
+                    <h5 class="text-[10px] uppercase font-black text-brand-navy/30 mb-3 tracking-widest">Career Prospects</h5>
+                    <div class="flex flex-wrap gap-2">
+                       <span class="px-3 py-1 bg-brand-cream text-brand-navy text-[9px] font-bold rounded-full">Community Health</span>
+                       <span class="px-3 py-1 bg-brand-cream text-brand-navy text-[9px] font-bold rounded-full">Staff Nurse</span>
+                       <span class="px-3 py-1 bg-brand-cream text-brand-navy text-[9px] font-bold rounded-full">Home Care</span>
+                    </div>
+                 </div>
+              </div>
+            </div>
+            <!-- M.Sc Nursing -->
+            <div class="bg-white rounded-[2.5rem] p-1 shadow-xl hover:shadow-2xl transition-all group overflow-hidden border border-brand-navy/5">
+              <div class="p-8 space-y-4">
+                 <div class="flex justify-between items-start">
+                    <h4 class="text-2xl font-black text-brand-navy">M.Sc. Nursing</h4>
+                    <span class="text-[10px] font-bold text-brand-gold uppercase tracking-widest">2 Years</span>
+                 </div>
+                 <p class="text-brand-navy/60 text-sm leading-relaxed font-light">Advanced clinical skills for registered nurses aimed at specialization and administration.</p>
+                 <div class="pt-4 border-t border-brand-navy/5">
+                    <h5 class="text-[10px] uppercase font-black text-brand-navy/30 mb-3 tracking-widest">Career Prospects</h5>
+                    <div class="flex flex-wrap gap-2">
+                       <span class="px-3 py-1 bg-brand-cream text-brand-navy text-[9px] font-bold rounded-full">Practitioner</span>
+                       <span class="px-3 py-1 bg-brand-cream text-brand-navy text-[9px] font-bold rounded-full">Administrator</span>
+                       <span class="px-3 py-1 bg-brand-cream text-brand-navy text-[9px] font-bold rounded-full">Educator</span>
+                    </div>
+                 </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8">
-           <!-- Review 1 -->
-            <div class="glass-card p-8 bg-slate-50 border-slate-100 hover:shadow-xl transition-all">
-               <div class="flex gap-1 mb-6">
-                  <svg class="w-4 h-4 text-yellow-500 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                  <svg class="w-4 h-4 text-yellow-500 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                  <svg class="w-4 h-4 text-yellow-500 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                  <svg class="w-4 h-4 text-yellow-500 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                  <svg class="w-4 h-4 text-yellow-500 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-               </div>
-               <p class="text-slate-600 font-light italic mb-8">"The clinical exposure here is unmatched. I felt fully prepared for my rotations and my first job in the hospital."</p>
-               <div class="flex items-center gap-4">
-                  <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-brand-500/20 shadow-sm">
-                    <img src="/student_testimonial_1_1773402295926.png" alt="Anjali" class="w-full h-full object-cover">
+        <!-- Category: Allied Health & BPT -->
+        <div class="space-y-8">
+          <div class="flex items-center gap-4">
+             <span class="px-3 py-1 bg-brand-burgundy text-white text-[10px] font-bold rounded-lg uppercase tracking-widest">Allied Health & Physiotherapy</span>
+             <div class="flex-grow h-[1px] bg-brand-burgundy/10"></div>
+          </div>
+          
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- BPT -->
+            <div class="bg-brand-navy rounded-[2.5rem] p-1 shadow-xl hover:shadow-2xl transition-all group overflow-hidden">
+               <div class="p-8 space-y-4 text-white">
+                  <div class="flex justify-between items-start">
+                     <h4 class="text-2xl font-black">B.P.T</h4>
+                     <span class="text-[10px] font-bold text-brand-gold uppercase tracking-widest">4.5 Years</span>
                   </div>
-                  <div>
-                     <h5 class="font-bold text-slate-900">Anjali Joseph</h5>
-                     <p class="text-xs text-slate-500">B.Sc Nursing Alumni</p>
-                  </div>
-               </div>
-            </div>
-           
-           <!-- Review 2 -->
-            <div class="glass-card p-8 bg-slate-50 border-slate-100 hover:shadow-xl transition-all md:-translate-y-4">
-               <div class="flex gap-1 mb-6">
-                  <svg class="w-4 h-4 text-yellow-500 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                  <svg class="w-4 h-4 text-yellow-500 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                  <svg class="w-4 h-4 text-yellow-500 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                  <svg class="w-4 h-4 text-yellow-500 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                  <svg class="w-4 h-4 text-yellow-500 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-               </div>
-               <p class="text-slate-600 font-light italic mb-8">"The state-of-the-art labs and the quality of teaching are exceptional. I'm proud to be part of the Allied Health team here."</p>
-               <div class="flex items-center gap-4">
-                  <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-accent-500/20 shadow-sm">
-                    <img src="/student_testimonial_2_1773402317322.png" alt="Rahul" class="w-full h-full object-cover">
-                  </div>
-                  <div>
-                     <h5 class="font-bold text-slate-900">Rahul Kumar</h5>
-                     <p class="text-xs text-slate-500">B.Sc MIT Student</p>
-                  </div>
+                  <p class="text-white/60 text-sm leading-relaxed font-light">Bachelor of Physiotherapy focusing on injury rehabilitation and pain management.</p>
+                  <div class="pt-4 border-t border-white/10">
+                    <h5 class="text-[10px] uppercase font-black text-white/20 mb-3 tracking-widest">Career Prospects</h5>
+                    <div class="flex flex-wrap gap-2">
+                       <span class="px-3 py-1 bg-white/5 text-white text-[9px] font-bold rounded-full">Rehab Specialist</span>
+                       <span class="px-3 py-1 bg-white/5 text-white text-[9px] font-bold rounded-full">Sports Clinic</span>
+                       <span class="px-3 py-1 bg-white/5 text-white text-[9px] font-bold rounded-full">Consultant</span>
+                    </div>
+                 </div>
                </div>
             </div>
-
-           <!-- Review 3 -->
-            <div class="glass-card p-8 bg-slate-50 border-slate-100 hover:shadow-xl transition-all">
-               <div class="flex gap-1 mb-6">
-                  <svg class="w-4 h-4 text-yellow-500 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                  <svg class="w-4 h-4 text-yellow-500 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                  <svg class="w-4 h-4 text-yellow-500 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                  <svg class="w-4 h-4 text-yellow-500 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                  <svg class="w-4 h-4 text-yellow-500 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-               </div>
-               <p class="text-slate-600 font-light italic mb-8">"Choosing Sree Narayana was the best decision for my BPT course. The faculty is very supportive and the campus atmosphere is great."</p>
-               <div class="flex items-center gap-4">
-                  <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-green-500/20 shadow-sm">
-                    <img src="/student_testimonial_3_1773402336146.png" alt="Sneha" class="w-full h-full object-cover">
-                  </div>
-                  <div>
-                     <h5 class="font-bold text-slate-900">Sneha Mathew</h5>
-                     <p class="text-xs text-slate-500">BPT Student</p>
-                  </div>
-               </div>
+            <!-- B.Sc. AT-OT -->
+            <div class="bg-white rounded-[2.5rem] p-1 shadow-xl hover:shadow-2xl transition-all group overflow-hidden border border-brand-navy/5">
+              <div class="p-8 space-y-4">
+                 <div class="flex justify-between items-start">
+                    <h4 class="text-2xl font-black text-brand-navy">B.Sc. AT & OT</h4>
+                    <span class="text-[10px] font-bold text-brand-gold uppercase tracking-widest">3 Years</span>
+                 </div>
+                 <p class="text-brand-navy/60 text-sm leading-relaxed font-light">Anaesthesia & Operation Theatre Technology training in theater management and clinical exposure.</p>
+                 <div class="pt-4 border-t border-brand-navy/5">
+                    <h5 class="text-[10px] uppercase font-black text-brand-navy/30 mb-3 tracking-widest">Career Prospects</h5>
+                    <div class="flex flex-wrap gap-2">
+                       <span class="px-3 py-1 bg-brand-cream text-brand-navy text-[9px] font-bold rounded-full">Technician</span>
+                       <span class="px-3 py-1 bg-brand-cream text-brand-navy text-[9px] font-bold rounded-full">Endoscopy Tech</span>
+                       <span class="px-3 py-1 bg-brand-cream text-brand-navy text-[9px] font-bold rounded-full">Trauma Care</span>
+                    </div>
+                 </div>
+              </div>
             </div>
+             <!-- B.Sc. MIT -->
+             <div class="bg-white rounded-[2.5rem] p-1 shadow-xl hover:shadow-2xl transition-all group overflow-hidden border border-brand-navy/5">
+              <div class="p-8 space-y-4">
+                 <div class="flex justify-between items-start">
+                    <h4 class="text-2xl font-black text-brand-navy">B.Sc. MIT</h4>
+                    <span class="text-[10px] font-bold text-brand-gold uppercase tracking-widest">3 Years</span>
+                 </div>
+                 <p class="text-brand-navy/60 text-sm leading-relaxed font-light">Medical Imaging Technology training for radiology, CT, MRI, and ultrasound diagnostics.</p>
+                 <div class="pt-4 border-t border-brand-navy/5">
+                    <h5 class="text-[10px] uppercase font-black text-brand-navy/30 mb-3 tracking-widest">Career Prospects</h5>
+                    <div class="flex flex-wrap gap-2">
+                       <span class="px-3 py-1 bg-brand-cream text-brand-navy text-[9px] font-bold rounded-full">Radiographer</span>
+                       <span class="px-3 py-1 bg-brand-cream text-brand-navy text-[9px] font-bold rounded-full">CT/MRI Tech</span>
+                       <span class="px-3 py-1 bg-brand-cream text-brand-navy text-[9px] font-bold rounded-full">PACS Admin</span>
+                    </div>
+                 </div>
+              </div>
+            </div>
+          </div>
         </div>
-     </div>
-  </section>
+        
+      </div>
 
-  <!-- Epic CTA -->
-
-  <section class="py-32 relative flex items-center justify-center overflow-hidden border-t border-slate-100">
-     <!-- Abstract Geometry -->
-    <div class="absolute inset-0 z-0 flex items-center justify-center mix-blend-multiply opacity-20">
-       <div class="w-[800px] h-[800px] border border-slate-200 rounded-full absolute animate-[spin_60s_linear_infinite]"></div>
-       <div class="w-[600px] h-[600px] border border-brand-500/20 rounded-full absolute animate-[spin_40s_linear_reverse_infinite]"></div>
-       <div class="w-[400px] h-[400px] border border-accent-500/20 rounded-full absolute animate-[spin_20s_linear_infinite]"></div>
-    </div>
-
-    <div class="relative z-10 text-center max-w-4xl mx-auto px-4">
-       <!-- <div class="inline-flex items-center justify-center w-20 h-20 rounded-2xl glass mb-8 rotate-3 border border-slate-200">
-         <svg class="w-10 h-10 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-       </div> -->
-       <h2 class="text-[clamp(2.5rem,5vw,5rem)] font-black text-slate-900 leading-[1.1] mb-8 tracking-tight">
-         Ready to Answer <br/> <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-accent-600">The Calling.</span>
-       </h2>
-       <p class="text-xl text-slate-600 font-light mb-12 max-w-2xl mx-auto hidden md:block">
-         The world needs leaders with grit, competence, and a profound sense of humanity. It starts right here.
-       </p>
-       <div class="flex flex-col sm:flex-row gap-6 justify-center">
-        <a routerLink="/contact" class="inline-flex items-center justify-center px-10 py-5 overflow-hidden font-black tracking-widest uppercase text-white bg-brand-600 shadow-xl shadow-brand-600/20 hover:shadow-brand-600/40 transition-all group rounded-xl">
-            Apply Now
-        </a>
+      <!-- View All CTA -->
+       <div class="mt-20 text-center">
+         <a routerLink="/programs" class="group inline-flex items-center gap-4 text-brand-navy font-black uppercase tracking-widest text-xs">
+           View Full Academic Catalog
+           <span class="w-12 h-[2px] bg-brand-gold group-hover:w-20 transition-all"></span>
+         </a>
        </div>
     </div>
   </section>
+
+  <!-- Epic Final CTA -->
+  <section class="py-32 relative bg-brand-navy overflow-hidden">
+     <!-- Background Accent -->
+    <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-gold/5 rounded-full blur-[150px] animate-pulse"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 relative z-10 text-center space-y-12">
+       <h2 class="text-[clamp(2.5rem,6vw,5rem)] font-black text-white leading-tight">
+         Ready to Start Your <br/>
+         <span class="text-brand-gold underline decoration-brand-burgundy decoration-8 underline-offset-8">Dream Career?</span>
+       </h2>
+       <p class="text-white/60 text-xl font-light max-w-2xl mx-auto">
+         Take the first step toward clinical excellence and social transformation. Admissions are now open for the 2026-27 batch.
+       </p>
+       <div class="flex flex-col sm:flex-row gap-6 justify-center pt-8">
+          <a routerLink="/contact" class="px-12 py-5 bg-brand-gold text-brand-navy font-black uppercase tracking-[0.2em] rounded-2xl shadow-2xl hover:bg-white hover:scale-105 active:scale-95 transition-all">
+            Apply Now
+          </a>
+          <a href="tel:+918023456789" class="px-12 py-5 glass text-white font-black uppercase tracking-[0.2em] rounded-2xl border border-white/10 hover:bg-white/5 transition-all">
+            Request Callback
+          </a>
+       </div>
+       
+       <!-- Affiliations Bar -->
+       <div class="pt-24 opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-1000">
+         <div class="bg-white/5 p-8 rounded-[2rem] border border-white/10 flex flex-wrap justify-center gap-12 items-center">
+            <span class="text-white font-black text-[10px] uppercase tracking-widest">RGUHS Bangalore</span>
+            <span class="text-white font-black text-[10px] uppercase tracking-widest">Govt. of Karnataka</span>
+            <span class="text-white font-black text-[10px] uppercase tracking-widest">INC Recognized</span>
+            <span class="text-white font-black text-[10px] uppercase tracking-widest">KNC Certified</span>
+         </div>
+       </div>
+    </div>
+  </section>
+
 </div>

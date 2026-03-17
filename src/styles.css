@@ -8,11 +8,11 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply font-sans antialiased bg-white text-slate-900 overflow-x-hidden;
+    @apply font-sans antialiased bg-brand-cream text-brand-navy overflow-x-hidden;
   }
   
   ::selection {
-    @apply bg-brand-500 text-white;
+    @apply bg-brand-gold text-brand-navy;
   }
   
   /* Custom scrollbar */
@@ -20,27 +20,30 @@
     width: 6px;
   }
   ::-webkit-scrollbar-track {
-    @apply bg-slate-50;
+    @apply bg-brand-cream;
   }
   ::-webkit-scrollbar-thumb {
-    @apply bg-slate-200 rounded-full;
+    @apply bg-brand-navy/20 rounded-full;
   }
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-brand-500;
+    @apply bg-brand-gold;
   }
 }
 
 @layer utilities {
   .glass {
-    @apply bg-white/70 backdrop-blur-xl border border-black/5;
+    @apply bg-white/10 backdrop-blur-xl border border-white/10;
   }
   .glass-card {
-    @apply bg-white/80 backdrop-blur-md border border-black/5 rounded-3xl shadow-xl;
+    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl shadow-2xl;
   }
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-500 via-brand-600 to-accent-600;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-gold via-brand-gold to-white;
   }
   .focus-ring {
-    @apply focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 focus:ring-offset-white;
+    @apply focus:outline-none focus:ring-2 focus:ring-brand-gold focus:ring-offset-2 focus:ring-offset-brand-navy;
+  }
+  .bg-gradient-navy {
+    background: linear-gradient(135deg, #002D62 0%, #001a3a 100%);
   }
 }

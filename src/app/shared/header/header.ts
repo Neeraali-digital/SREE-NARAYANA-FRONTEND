@@ -1,5 +1,5 @@
-import { Component, signal, HostListener } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Component, signal, HostListener, inject } from '@angular/core';
+import { RouterLink, RouterLinkActive, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,8 +9,13 @@ import { CommonModule } from '@angular/common';
   styleUrl: './header.css',
 })
 export class Header {
+  private router = inject(Router);
   isMobileMenuOpen = signal(false);
   isScrolled = false;
+
+  get isHomePage(): boolean {
+    return this.router.url === '/' || this.router.url === '';
+  }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
