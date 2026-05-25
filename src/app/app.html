@@ -5,3 +5,104 @@
   </main>
   <app-footer></app-footer>
 </div>
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/918128036949" target="_blank" class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 group" title="Chat with Admissions via WhatsApp">
+  <!-- Pulsing Ring Background -->
+  <span class="absolute inset-0 rounded-full bg-emerald-500/30 animate-ping group-hover:animate-none"></span>
+  <!-- WhatsApp SVG Icon -->
+  <svg class="w-7 h-7 relative z-10 fill-current" viewBox="0 0 24 24">
+    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.665.989 3.3.15 5.362.15 5.433 0 9.853-4.42 9.856-9.855.002-2.63-1.02-5.101-2.871-6.955C17.083 4.639 14.613 3.62 11.99 3.62c-5.436 0-9.858 4.422-9.86 9.858-.001 2.02.527 3.993 1.528 5.727L2.646 22.03l2.97-1.054c1.657.904 3.03 1.178 4.636 1.178zM17.81 14.39c-.318-.16-1.884-.93-2.175-1.038-.29-.108-.503-.162-.715.158-.211.32-.82.822-1.005 1.033-.186.21-.371.236-.69.076-.318-.16-1.344-.495-2.559-1.58-.946-.844-1.585-1.887-1.77-2.207-.186-.32-.02-.493.139-.652.143-.143.318-.372.477-.558.16-.186.212-.319.319-.531.106-.213.053-.399-.027-.558-.08-.16-.715-1.724-.98-2.36-.258-.62-.52-.536-.715-.546-.185-.01-.397-.01-.61-.01-.212 0-.557.08-.848.399-.29.32-1.113 1.09-1.113 2.658s1.14 3.085 1.299 3.298c.159.213 2.24 3.42 5.426 4.793.758.327 1.35.522 1.813.669.76.242 1.453.208 2.001.126.61-.09 1.884-.77 2.149-1.474.265-.705.265-1.309.186-1.474-.08-.164-.291-.244-.61-.404z"/>
+  </svg>
+</a>
+
+<!-- Admissions Inquiry Modal Overlay -->
+<div *ngIf="admissions.isModalOpen()" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-md transition-opacity duration-300">
+  <!-- Modal Frame -->
+  <div class="bg-white rounded-[2rem] overflow-hidden max-w-4xl w-full max-h-[90vh] shadow-2xl flex flex-col md:flex-row relative z-10 border border-slate-100">
+    
+    <!-- Left panel (Cool College Advertisement) -->
+    <div class="md:w-1/2 relative min-h-[300px] md:min-h-full overflow-hidden flex flex-col justify-end p-10 text-white">
+      <img src="college_advertisement.png" alt="Sree Narayana Group of Institutions" class="absolute inset-0 w-full h-full object-cover z-0 hover:scale-105 transition-transform duration-[4000ms]">
+      <!-- Gradient overlay matching brochure color hues -->
+      <div class="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/60 to-brand-burgundy/20 z-10 mix-blend-multiply"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent z-10"></div>
+      
+      <div class="relative z-20 space-y-4">
+        <span class="inline-block px-3 py-1 bg-brand-gold text-brand-navy text-[8px] font-black uppercase tracking-widest rounded-full">
+          Admissions Open 2026-27
+        </span>
+        <h4 class="text-3xl font-black leading-none tracking-tighter">
+          Shaping the Leaders <br>of <span class="text-brand-gold">Healthcare.</span>
+        </h4>
+        <p class="text-xs text-white/70 font-light leading-relaxed">
+          Guided by Guru's Vision, Committed to Care and Knowledge. Join a network of elite medical professionals.
+        </p>
+        <!-- Mini motto representation from the flyer -->
+        <div class="pt-6 border-t border-white/10 flex gap-4 text-[9px] uppercase tracking-widest font-black text-white/50">
+          <span>Humanity</span>
+          <span>•</span>
+          <span>Education</span>
+          <span>•</span>
+          <span>Purpose</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right panel (Admissions Inquiry Form) -->
+    <div class="md:w-1/2 p-8 md:p-12 overflow-y-auto flex flex-col justify-center bg-white relative">
+      <!-- Close button -->
+      <button (click)="admissions.closeModal()" class="absolute top-6 right-6 w-8 h-8 rounded-full border border-slate-100 flex items-center justify-center text-slate-400 hover:text-brand-burgundy hover:border-brand-burgundy/30 transition-all focus:outline-none" title="Close modal">
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+
+      <div class="mb-8">
+        <h3 class="text-2xl font-black text-slate-900 tracking-tight">Admissions Enquiry</h3>
+        <p class="text-xs text-slate-500 font-light mt-1">Submit this form and an admissions counselor will connect with you.</p>
+      </div>
+
+      <form class="space-y-6">
+        <div>
+          <label class="block text-[9px] font-black uppercase tracking-wider text-brand-navy/60 mb-2">Full Name</label>
+          <input type="text" required class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm font-light text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-brand-gold transition-all" placeholder="Enter your name">
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-[9px] font-black uppercase tracking-wider text-brand-navy/60 mb-2">Email Address</label>
+            <input type="email" required class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm font-light text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-brand-gold transition-all" placeholder="name@email.com">
+          </div>
+          <div>
+            <label class="block text-[9px] font-black uppercase tracking-wider text-brand-navy/60 mb-2">Mobile Number</label>
+            <input type="tel" required class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm font-light text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-brand-gold transition-all" placeholder="+91 XXXXX XXXXX">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-[9px] font-black uppercase tracking-wider text-brand-navy/60 mb-2">Desired Course / Track</label>
+          <select class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm font-light text-slate-700 bg-white appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-brand-gold transition-all">
+            <option value="">Select a Program</option>
+            <option value="gnm">G.N.M (General Nursing & Midwifery)</option>
+            <option value="bsc_nursing">B.Sc. Nursing</option>
+            <option value="pb_nursing">PB.B.Sc. Nursing</option>
+            <option value="msc_nursing">M.Sc. Nursing</option>
+            <option value="bpt">BPT (Bachelor of Physiotherapy)</option>
+            <option value="at_ot">B.Sc. (AT & OT)</option>
+            <option value="mit">B.Sc. MIT (Medical Imaging Tech)</option>
+            <option value="optometry">B.Sc. Optometry</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-[9px] font-black uppercase tracking-wider text-brand-navy/60 mb-2">Inquiry message</label>
+          <textarea rows="2" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm font-light text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-brand-gold transition-all" placeholder="Any specific questions regarding course, eligibility, or fees..."></textarea>
+        </div>
+
+        <button type="button" (click)="admissions.closeModal()" class="w-full bg-brand-burgundy hover:bg-brand-burgundy-dark text-white font-black uppercase tracking-widest text-xs py-4 rounded-xl shadow-xl transition-all hover:shadow-brand-burgundy/20 active:scale-95 duration-200">
+          Submit Admissions Inquiry
+        </button>
+      </form>
+    </div>
+
+  </div>
+</div>

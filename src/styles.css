@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,38 +14,285 @@
   }
   
   ::selection {
-    @apply bg-brand-gold text-brand-navy;
+    @apply bg-brand-gold text-white;
   }
   
   /* Custom scrollbar */
   ::-webkit-scrollbar {
-    width: 6px;
+    width: 5px;
   }
   ::-webkit-scrollbar-track {
     @apply bg-brand-cream;
   }
   ::-webkit-scrollbar-thumb {
-    @apply bg-brand-navy/20 rounded-full;
+    @apply bg-brand-burgundy/30 rounded-full;
   }
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-brand-gold;
+    @apply bg-brand-burgundy;
   }
 }
 
+/* ============================================
+   DESIGN SYSTEM UTILITIES
+   ============================================ */
 @layer utilities {
+
+  /* Glass effect */
   .glass {
     @apply bg-white/10 backdrop-blur-xl border border-white/10;
   }
   .glass-card {
     @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl shadow-2xl;
   }
-  .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-gold via-brand-gold to-white;
+  .glass-dark {
+    background: rgba(6, 57, 94, 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.08);
   }
+  
+  /* Text gradients */
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-gold-light via-brand-gold to-brand-gold-light;
+  }
+  .text-gradient-burgundy {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-burgundy-light to-brand-burgundy-dark;
+  }
+  
+  /* Focus ring */
   .focus-ring {
-    @apply focus:outline-none focus:ring-2 focus:ring-brand-gold focus:ring-offset-2 focus:ring-offset-brand-navy;
+    @apply focus:outline-none focus:ring-2 focus:ring-brand-gold focus:ring-offset-2;
+  }
+
+  /* ── GRADIENT BACKGROUNDS ── */
+  .bg-gradient-burgundy {
+    background: linear-gradient(135deg, #8B1C46 0%, #5A0F2E 60%, #3A0520 100%);
   }
   .bg-gradient-navy {
-    background: linear-gradient(135deg, #002D62 0%, #001a3a 100%);
+    background: linear-gradient(135deg, #06395E 0%, #031F35 100%);
   }
+  .bg-gradient-burgundy-navy {
+    background: linear-gradient(135deg, #6B1235 0%, #06395E 100%);
+  }
+  .bg-gradient-hero {
+    background: linear-gradient(135deg, #7A1A40 0%, #56102E 40%, #041525 100%);
+  }
+
+  /* ── SECTION BAND ── */
+  .section-band-burgundy {
+    @apply bg-brand-burgundy text-white;
+  }
+  .section-band-navy {
+    @apply bg-brand-navy text-white;
+  }
+  .section-band-cream {
+    @apply bg-brand-cream text-brand-navy;
+  }
+
+  /* ── CARD STYLES (Brochure Language) ── */
+  .card-institution {
+    @apply bg-white rounded-2xl shadow-lg border border-brand-navy/5 overflow-hidden;
+    border-left: 4px solid #C9960C;
+  }
+  .card-institution-burgundy {
+    @apply bg-white rounded-2xl shadow-lg border border-brand-navy/5 overflow-hidden;
+    border-left: 4px solid #8B1C46;
+  }
+  .card-institution-navy {
+    @apply bg-brand-navy rounded-2xl shadow-lg overflow-hidden;
+    border-left: 4px solid #C9960C;
+  }
+
+  /* ── DIVIDER ACCENTS ── */
+  .gold-underline {
+    position: relative;
+    display: inline-block;
+  }
+  .gold-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 60%;
+    height: 3px;
+    background: #C9960C;
+    border-radius: 2px;
+  }
+
+  /* ── INSTITUTION BADGE ── */
+  .badge-institution {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-[0.25em];
+    background: rgba(201, 150, 12, 0.12);
+    border: 1px solid rgba(201, 150, 12, 0.3);
+    color: #C9960C;
+  }
+  .badge-institution-white {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-[0.25em];
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #E5B842;
+  }
+
+  /* ── BUTTON STYLES ── */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-4 bg-brand-burgundy text-white font-black uppercase tracking-widest text-xs rounded-xl shadow-xl;
+    transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .btn-primary:hover {
+    @apply bg-brand-burgundy-dark shadow-2xl;
+    transform: translateY(-2px);
+  }
+  .btn-primary:active {
+    transform: translateY(0) scale(0.97);
+  }
+  .btn-gold {
+    @apply inline-flex items-center justify-center px-8 py-4 bg-brand-gold text-brand-navy font-black uppercase tracking-widest text-xs rounded-xl shadow-xl shadow-brand-gold/20;
+    transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .btn-gold:hover {
+    @apply bg-brand-gold-light;
+    transform: translateY(-2px);
+  }
+  .btn-outline-white {
+    @apply inline-flex items-center justify-center px-8 py-4 text-white font-black uppercase tracking-widest text-xs rounded-xl border border-white/20;
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .btn-outline-white:hover {
+    background: rgba(255,255,255,0.12);
+    border-color: rgba(255,255,255,0.35);
+  }
+}
+
+/* ============================================
+   SCROLL ANIMATION SYSTEM
+   ============================================ */
+[data-animate] {
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  transition-duration: 0.75s;
+}
+
+[data-animate="fade-up"] {
+  transform: translateY(40px);
+}
+[data-animate="fade-left"] {
+  transform: translateX(-50px);
+}
+[data-animate="fade-right"] {
+  transform: translateX(50px);
+}
+[data-animate="scale-in"] {
+  transform: scale(0.88);
+}
+[data-animate="fade-in"] {
+  transform: none;
+}
+
+[data-animate].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Stagger delays for children */
+[data-animate-stagger] > *:nth-child(1) { transition-delay: 0ms; }
+[data-animate-stagger] > *:nth-child(2) { transition-delay: 100ms; }
+[data-animate-stagger] > *:nth-child(3) { transition-delay: 200ms; }
+[data-animate-stagger] > *:nth-child(4) { transition-delay: 300ms; }
+[data-animate-stagger] > *:nth-child(5) { transition-delay: 400ms; }
+[data-animate-stagger] > *:nth-child(6) { transition-delay: 500ms; }
+[data-animate-stagger] > *:nth-child(7) { transition-delay: 600ms; }
+[data-animate-stagger] > *:nth-child(8) { transition-delay: 700ms; }
+[data-animate-stagger] > *:nth-child(9) { transition-delay: 800ms; }
+
+[data-animate-stagger] > * {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1), transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+[data-animate-stagger].is-visible > * {
+  opacity: 1;
+  transform: none;
+}
+
+/* Custom delay overrides */
+[data-delay="100"] { transition-delay: 100ms !important; }
+[data-delay="200"] { transition-delay: 200ms !important; }
+[data-delay="300"] { transition-delay: 300ms !important; }
+[data-delay="400"] { transition-delay: 400ms !important; }
+[data-delay="500"] { transition-delay: 500ms !important; }
+[data-delay="600"] { transition-delay: 600ms !important; }
+
+/* ============================================
+   TEXTURE OVERLAYS
+   ============================================ */
+.texture-grain::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ============================================
+   HERO DECORATIVE ELEMENTS
+   ============================================ */
+.hero-diagonal-lines {
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 35px,
+    rgba(201, 150, 12, 0.04) 35px,
+    rgba(201, 150, 12, 0.04) 36px
+  );
+}
+
+/* ============================================
+   COURSE CARD ACCENT BARS
+   ============================================ */
+.course-card-gold {
+  border-top: 3px solid #C9960C;
+}
+.course-card-burgundy {
+  border-top: 3px solid #8B1C46;
+}
+
+/* ============================================
+   ADMISSION MODAL
+   ============================================ */
+.modal-enter {
+  animation: modalEnter 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+@keyframes modalEnter {
+  from { opacity: 0; transform: scale(0.92) translateY(20px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* ============================================
+   MARQUEE / TICKER
+   ============================================ */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* ============================================
+   SECTION SEPARATOR WAVES
+   ============================================ */
+.wave-cream svg { fill: #FAF6ED; }
+.wave-white svg { fill: #FFFFFF; }
+.wave-burgundy svg { fill: #8B1C46; }
+
+/* ============================================
+   STATS COUNTER
+   ============================================ */
+.stat-number {
+  font-variant-numeric: tabular-nums;
 }

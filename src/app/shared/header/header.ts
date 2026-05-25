@@ -1,6 +1,7 @@
 import { Component, signal, HostListener, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { AdmissionsService } from '../admissions.service';
 
 @Component({
   selector: 'app-header',
@@ -10,6 +11,7 @@ import { CommonModule } from '@angular/common';
 })
 export class Header {
   private router = inject(Router);
+  public admissions = inject(AdmissionsService);
   isMobileMenuOpen = signal(false);
   isScrolled = false;
 

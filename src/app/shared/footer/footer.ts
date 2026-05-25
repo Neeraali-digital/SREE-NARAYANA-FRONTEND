@@ -1,9 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { AdmissionsService } from '../admissions.service';
 
 @Component({
   selector: 'app-footer',
-  imports: [],
+  imports: [RouterLink, CommonModule],
   templateUrl: './footer.html',
   styleUrl: './footer.css',
 })
-export class Footer {}
+export class Footer {
+  public admissions = inject(AdmissionsService);
+}

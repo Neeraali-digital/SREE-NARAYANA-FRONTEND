@@ -1,157 +1,421 @@
-<div class="bg-white min-h-screen text-slate-800 pb-32">
+<div class="bg-brand-cream min-h-screen text-brand-navy pb-32">
   
-  <!-- Abstract Sub-Hero -->
-  <section class="relative pt-32 pb-20 md:py-40 flex items-center overflow-hidden border-b border-slate-100">
-    <!-- Grid Pattern -->
-    <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/black-scales.png')] opacity-[0.02] z-0"></div>
-    <div class="absolute bottom-0 right-0 w-[800px] h-[400px] bg-accent-500/10 rounded-t-full blur-[150px]"></div>
+  <!-- Sub-Hero Header — Burgundy -->
+  <section class="relative pt-0 pb-24 flex items-end min-h-[50vh] overflow-hidden text-white" style="background: linear-gradient(135deg, #7A1A40 0%, #56102E 45%, #041525 100%);">
+    <div class="absolute inset-0 hero-diagonal-lines opacity-60 pointer-events-none"></div>
+    <div class="absolute bottom-0 right-0 w-[700px] h-[300px] bg-brand-gold/8 rounded-t-full blur-[120px] pointer-events-none"></div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center flex flex-col items-center">
-       <span class="inline-block px-4 py-1.5 rounded-full glass border border-brand-500/20 text-xs font-bold tracking-[0.2em] text-brand-600 uppercase mb-8 shadow-sm">
-         Academics
-       </span>
-       <h1 class="text-[clamp(3rem,6vw,5rem)] font-black leading-tight tracking-tighter mb-6 text-slate-900">
-         Programs Built For<br>
-         <span class="text-gradient">Extreme Competence.</span>
-       </h1>
-       <p class="text-xl text-slate-600 font-light max-w-2xl mx-auto leading-relaxed px-6">
-         Select your track. Embark on a highly disciplined, immersive educational experience spanning from undergraduate foundations to advanced administrative certifications.
-       </p>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-32" data-animate="fade-up">
+      <div class="max-w-3xl">
+        <span class="badge-institution-white mb-6">Academics</span>
+        <h1 class="text-[clamp(3rem,6vw,5rem)] font-black leading-tight tracking-tighter text-white mt-4 mb-5">
+          Programs Built For<br>
+          <span class="text-brand-gold-light">Clinical Excellence.</span>
+        </h1>
+        <p class="text-xl text-white/65 font-light max-w-2xl leading-relaxed">
+          Select your specialization. Comprehensive nursing tracks and allied health science programs built exactly to national healthcare standards — RGUHS affiliated &amp; INC recognized.
+        </p>
+      </div>
     </div>
   </section>
 
-  <!-- Programs List Container -->
-  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 relative z-20 -mt-10">
+  <!-- Interactive Programs Filter Container -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-20">
     
-    <!-- Nursing Programs -->
-    <div class="mb-24">
+    <!-- Tab Switcher -->
+    <div class="flex justify-center mb-16" data-animate="scale-in">
+      <div class="inline-flex p-1.5 bg-white rounded-2xl border border-brand-navy/10 shadow-lg">
+        <button (click)="setTab('all')" 
+                [class.bg-brand-burgundy]="selectedTab() === 'all'" [class.text-white]="selectedTab() === 'all'" [class.text-brand-navy]="selectedTab() !== 'all'"
+                class="px-6 py-3 rounded-xl font-black text-xs uppercase tracking-widest transition-all">
+          All Programs
+        </button>
+        <button (click)="setTab('nursing')" 
+                [class.bg-brand-burgundy]="selectedTab() === 'nursing'" [class.text-white]="selectedTab() === 'nursing'" [class.text-brand-navy]="selectedTab() !== 'nursing'"
+                class="px-6 py-3 rounded-xl font-black text-xs uppercase tracking-widest transition-all">
+          Nursing Courses
+        </button>
+        <button (click)="setTab('allied')" 
+                [class.bg-brand-burgundy]="selectedTab() === 'allied'" [class.text-white]="selectedTab() === 'allied'" [class.text-brand-navy]="selectedTab() !== 'allied'"
+                class="px-6 py-3 rounded-xl font-black text-xs uppercase tracking-widest transition-all">
+          Allied Health & BPT
+        </button>
+      </div>
+    </div>
+
+    <!-- NURSING PROGRAMS SECTION -->
+    <div *ngIf="selectedTab() === 'all' || selectedTab() === 'nursing'" class="mb-24" data-animate="fade-up">
       <div class="flex items-center gap-4 mb-12">
-        <div class="h-[1px] flex-1 bg-slate-100"></div>
-        <h2 class="text-2xl font-black text-slate-900 px-6 py-2 border border-brand-500/10 rounded-full glass bg-white/50 uppercase tracking-widest text-sm text-brand-600">Nursing Programs</h2>
-        <div class="h-[1px] flex-1 bg-slate-100"></div>
+        <span class="px-4 py-2 bg-brand-navy text-white text-[9px] font-black rounded-xl uppercase tracking-widest">Nursing Programs</span>
+        <div class="flex-grow h-[1px] bg-brand-navy/10"></div>
+        <span class="text-[10px] font-bold text-brand-navy/40 uppercase tracking-widest hidden md:block">RGUHS Affiliated · INC Recognized</span>
       </div>
       
-      <div class="grid md:grid-cols-2 gap-8">
+      <div class="grid md:grid-cols-2 gap-6">
+        
+        <!-- B.Sc. Nursing -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-brand-navy/5 shadow-lg hover:shadow-2xl transition-all group flex flex-col justify-between course-card-gold">
+           <div class="p-8">
+             <div class="flex justify-between items-start mb-5">
+                <span class="text-brand-gold text-[9px] font-black uppercase tracking-widest">Bachelor's Degree</span>
+                <span class="bg-brand-cream text-brand-navy text-[9px] font-black px-3 py-1 rounded-full">4 Years</span>
+             </div>
+             <h3 class="text-2xl font-black text-brand-navy mb-3 group-hover:text-brand-burgundy transition-colors">B.Sc. Nursing</h3>
+             <p class="text-brand-navy/70 font-light text-sm leading-relaxed mb-6">
+               The B.Sc. nursing degree program is a four-year fulltime program comprising eight semesters, which prepares B.Sc. nursing graduates qualified to practice nursing and midwifery in a variety of settings in either public/government or private healthcare settings. The program encompasses foundational, core and elective courses.
+             </p>
+           </div>
+           
+           <div class="pt-6 border-t border-slate-100 mt-6 space-y-4">
+             <!-- Accordion trigger -->
+             <button (click)="toggleCourseDetails('bsc_nursing')" class="w-full flex justify-between items-center text-xs font-black uppercase tracking-widest text-brand-navy hover:text-brand-gold transition-colors focus:outline-none">
+               <span>Career Prospects (17 options)</span>
+               <span class="text-lg font-light">{{ expandedCourse() === 'bsc_nursing' ? '−' : '+' }}</span>
+             </button>
+             
+             <!-- Expanding Accordion Prospects -->
+             <div *ngIf="expandedCourse() === 'bsc_nursing'" class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-brand-navy/70 font-light py-2 animate-fade-in-up">
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> ICU/CCU Specialist Nurse</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Operation Theatre Nurse</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Emergency Dept. Nurse</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Dialysis Nurse</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Infection Control Nurse</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Nursing Supervisor</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Ward In-charge</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Nursing Superintendent</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Quality Manager</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Healthcare Administrator</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Nursing Tutor</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Clinical Instructor</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Research Assistant</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Healthcare Trainer</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Staff Nurse</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Travel Nurse</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Cruise Ship Nurse</div>
+             </div>
+
+             <button (click)="admissions.openModal()" class="w-full bg-brand-gold hover:bg-brand-navy hover:text-white text-brand-navy font-bold uppercase tracking-widest text-[10px] py-4 rounded-xl shadow-lg shadow-brand-gold/15 transition-all active:scale-95 duration-200">
+               Apply Online
+             </button>
+           </div>
+        </div>
+
         <!-- GNM -->
-        <div class="glass-card p-10 bg-white border-slate-100 hover:border-brand-500/20 transition-all group">
-           <div class="flex justify-between items-start mb-6">
-              <span class="text-brand-600 font-bold tracking-widest text-[10px] uppercase">Diploma Program</span>
-              <span class="text-slate-400 font-bold text-[10px] uppercase">3 Years</span>
+        <div class="bg-white rounded-2xl overflow-hidden border border-brand-navy/5 shadow-lg hover:shadow-2xl transition-all group flex flex-col justify-between course-card-gold">
+           <div class="p-8">
+             <div class="flex justify-between items-start mb-5">
+                <span class="text-brand-gold text-[9px] font-black uppercase tracking-widest">Diploma Track</span>
+                <span class="bg-brand-cream text-brand-navy text-[9px] font-black px-3 py-1 rounded-full">3.5 Years</span>
+             </div>
+             <h3 class="text-2xl font-black text-brand-navy mb-3 group-hover:text-brand-burgundy transition-colors">GNM</h3>
+             <p class="text-brand-navy/70 font-light text-sm leading-relaxed mb-6">
+               General Nursing and Midwifery (GNM) is a 3 to 3.5-year diploma program focusing on practical clinical care, midwifery, and community health. It trains students for roles as Registered Nurse Registered Midwives (RNRM) in hospitals, clinics, and community centers. The curriculum covers nursing foundations, anatomy, pharmacology, and maternal health.
+             </p>
            </div>
-           <h3 class="text-2xl font-black text-slate-900 mb-4 group-hover:text-brand-600 transition-colors">G.N.M</h3>
-           <p class="text-slate-500 font-light text-sm mb-8">General Nursing & Midwifery foundation for future healthcare specialists.</p>
-           <button class="text-[10px] font-black uppercase tracking-widest text-slate-900 group-hover:text-brand-600 transition-colors flex items-center gap-2">View Details <span class="group-hover:translate-x-1 transition-transform">→</span></button>
-        </div>
-        <!-- B.Sc Nursing -->
-        <div class="glass-card p-10 bg-white border-slate-100 hover:border-brand-500/20 transition-all group">
-           <div class="flex justify-between items-start mb-6">
-              <span class="text-brand-600 font-bold tracking-widest text-[10px] uppercase">Undergraduate</span>
-              <span class="text-slate-400 font-bold text-[10px] uppercase">4 Years</span>
+           
+           <div class="pt-6 border-t border-slate-100 mt-6 space-y-4">
+             <button (click)="toggleCourseDetails('gnm')" class="w-full flex justify-between items-center text-xs font-black uppercase tracking-widest text-brand-navy hover:text-brand-gold transition-colors focus:outline-none">
+               <span>Career Prospects (8 options)</span>
+               <span class="text-lg font-light">{{ expandedCourse() === 'gnm' ? '−' : '+' }}</span>
+             </button>
+             
+             <div *ngIf="expandedCourse() === 'gnm'" class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-brand-navy/70 font-light py-2 animate-fade-in-up">
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Staff Nurse</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> ICU/CCU Nurse</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Maternal Health Nurse</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Home Care Nurse</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Operation Theatre (OT)</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Nursing Tutor/Educator</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Industrial/School Nurse</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Emergency Room (ER) Nurse</div>
+             </div>
+
+             <button (click)="admissions.openModal()" class="w-full bg-brand-gold hover:bg-brand-navy hover:text-white text-brand-navy font-bold uppercase tracking-widest text-[10px] py-4 rounded-xl shadow-lg shadow-brand-gold/15 transition-all active:scale-95 duration-200">
+               Apply Online
+             </button>
            </div>
-           <h3 class="text-2xl font-black text-slate-900 mb-4 group-hover:text-brand-600 transition-colors">B.Sc Nursing</h3>
-           <p class="text-slate-500 font-light text-sm mb-8">Comprehensive undergraduate degree program in modern nursing sciences.</p>
-           <button class="text-[10px] font-black uppercase tracking-widest text-slate-900 group-hover:text-brand-600 transition-colors flex items-center gap-2">View Details <span class="group-hover:translate-x-1 transition-transform">→</span></button>
         </div>
+
         <!-- PB.B.Sc Nursing -->
-        <div class="glass-card p-10 bg-white border-slate-100 hover:border-brand-500/20 transition-all group">
-           <div class="flex justify-between items-start mb-6">
-              <span class="text-brand-600 font-bold tracking-widest text-[10px] uppercase">Undergraduate</span>
-              <span class="text-slate-400 font-bold text-[10px] uppercase">2 Years</span>
+        <div class="bg-white rounded-2xl overflow-hidden border border-brand-navy/5 shadow-lg hover:shadow-2xl transition-all group flex flex-col justify-between course-card-gold">
+           <div class="p-8">
+             <div class="flex justify-between items-start mb-5">
+                <span class="text-brand-gold text-[9px] font-black uppercase tracking-widest">Post Diploma UG</span>
+                <span class="bg-brand-cream text-brand-navy text-[9px] font-black px-3 py-1 rounded-full">2 Years</span>
+             </div>
+             <h3 class="text-2xl font-black text-brand-navy mb-3 group-hover:text-brand-burgundy transition-colors">PB.B.Sc. Nursing</h3>
+             <p class="text-brand-navy/70 font-light text-sm leading-relaxed mb-6">
+               Post Basic B.Sc. degree in Nursing is a broad based education aimed to build upon the skills and competencies acquired at the diploma in nursing level. It is specifically directed to the upgrading of critical thinking skills, competencies and standards required for practice of professional nursing and midwifery as envisaged in National Health Policy.
+             </p>
            </div>
-           <h3 class="text-2xl font-black text-slate-900 mb-4 group-hover:text-brand-600 transition-colors">PB.B.Sc Nursing</h3>
-           <p class="text-slate-500 font-light text-sm mb-8">Post Basic degree for diploma holders to upgrade their clinical expertise.</p>
-           <button class="text-[10px] font-black uppercase tracking-widest text-slate-900 group-hover:text-brand-600 transition-colors flex items-center gap-2">View Details <span class="group-hover:translate-x-1 transition-transform">→</span></button>
-        </div>
-        <!-- M.Sc Nursing -->
-        <div class="glass-card p-10 bg-white border-slate-100 hover:border-brand-500/20 transition-all group">
-           <div class="flex justify-between items-start mb-6">
-              <span class="text-brand-600 font-bold tracking-widest text-[10px] uppercase">Postgraduate</span>
-              <span class="text-slate-400 font-bold text-[10px] uppercase">2 Years</span>
+           
+           <div class="pt-6 border-t border-slate-100 mt-6 space-y-4">
+             <button (click)="toggleCourseDetails('pb_nursing')" class="w-full flex justify-between items-center text-xs font-black uppercase tracking-widest text-brand-navy hover:text-brand-gold transition-colors focus:outline-none">
+               <span>Career Prospects (18 options)</span>
+               <span class="text-lg font-light">{{ expandedCourse() === 'pb_nursing' ? '−' : '+' }}</span>
+             </button>
+             
+             <div *ngIf="expandedCourse() === 'pb_nursing'" class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-brand-navy/70 font-light py-2 animate-fade-in-up">
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> ICU/CCU Specialist Nurse</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Operation Theatre Nurse</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Emergency Dept. Nurse</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Dialysis Nurse</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Infection Control Nurse</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Nursing Supervisor</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Ward In-charge</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Nursing Superintendent</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Quality Manager</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Healthcare Administrator</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Education & Research</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Nursing Tutor/Lecturer</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Clinical Instructor</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Research Assistant</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Healthcare Trainer</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Global Staff Nurse</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Travel Nurse</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Cruise Ship Nurse</div>
+             </div>
+
+             <button (click)="admissions.openModal()" class="w-full bg-brand-gold hover:bg-brand-navy hover:text-white text-brand-navy font-bold uppercase tracking-widest text-[10px] py-4 rounded-xl shadow-lg shadow-brand-gold/15 transition-all active:scale-95 duration-200">
+               Apply Online
+             </button>
            </div>
-           <h3 class="text-2xl font-black text-slate-900 mb-4 group-hover:text-brand-600 transition-colors">M.Sc Nursing</h3>
-           <p class="text-slate-500 font-light text-sm mb-8">Advanced master's degree for clinical leadership and educational roles.</p>
-           <button class="text-[10px] font-black uppercase tracking-widest text-slate-900 group-hover:text-brand-600 transition-colors flex items-center gap-2">View Details <span class="group-hover:translate-x-1 transition-transform">→</span></button>
         </div>
+
+        <!-- M.Sc. Nursing -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-brand-navy/5 shadow-lg hover:shadow-2xl transition-all group flex flex-col justify-between course-card-gold">
+           <div class="p-8">
+             <div class="flex justify-between items-start mb-5">
+                <span class="text-brand-gold text-[9px] font-black uppercase tracking-widest">Postgraduate</span>
+                <span class="bg-brand-cream text-brand-navy text-[9px] font-black px-3 py-1 rounded-full">2 Years</span>
+             </div>
+             <h3 class="text-2xl font-black text-brand-navy mb-3 group-hover:text-brand-burgundy transition-colors">M.Sc. Nursing</h3>
+             <p class="text-brand-navy/70 font-light text-sm leading-relaxed mb-6">
+               M.Sc. Nursing is a 2-year postgraduate program designed for registered nurses to gain specialized knowledge and advanced clinical skills, leading to roles as clinical specialists, educators, researchers, or administrators. It requires a B.Sc. Nursing degree, registration with a state council, and usually 1+ year of work.
+             </p>
+           </div>
+           
+           <div class="pt-6 border-t border-slate-100 mt-6 space-y-4">
+             <button (click)="toggleCourseDetails('msc_nursing')" class="w-full flex justify-between items-center text-xs font-black uppercase tracking-widest text-brand-navy hover:text-brand-gold transition-colors focus:outline-none">
+               <span>Career Prospects (15 options)</span>
+               <span class="text-lg font-light">{{ expandedCourse() === 'msc_nursing' ? '−' : '+' }}</span>
+             </button>
+             
+             <div *ngIf="expandedCourse() === 'msc_nursing'" class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-brand-navy/70 font-light py-2 animate-fade-in-up">
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Nurse Practitioner</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Clinical Nurse Specialist</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> ICU/Cardiac Nurse</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Emergency Room Supervisor</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Neonatal/Paediatric Nurse</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Nursing Manager/Director</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Nursing Superintendent</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Nursing Executive</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Healthcare Administrator</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Nursing Tutor/Lecturer</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Clinical Instructor</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Infection Control Nurse</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Military Nurse</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Home Care Nurse</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Quality Assurance Coord.</div>
+             </div>
+
+             <button (click)="admissions.openModal()" class="w-full bg-brand-gold hover:bg-brand-navy hover:text-white text-brand-navy font-bold uppercase tracking-widest text-[10px] py-4 rounded-xl shadow-lg shadow-brand-gold/15 transition-all active:scale-95 duration-200">
+               Apply Online
+             </button>
+           </div>
+        </div>
+
       </div>
     </div>
 
-    <!-- Allied Health Sciences -->
-    <div class="mb-24">
+    <!-- ALLIED HEALTH & BPT SECTION -->
+    <div *ngIf="selectedTab() === 'all' || selectedTab() === 'allied'" class="mb-24 animate-fade-in-up">
       <div class="flex items-center gap-4 mb-12">
-        <div class="h-[1px] flex-1 bg-slate-100"></div>
-        <h2 class="text-2xl font-black text-slate-900 px-6 py-2 border border-accent-500/10 rounded-full glass bg-white/50 uppercase tracking-widest text-sm text-accent-700">Allied Health Sciences</h2>
-        <div class="h-[1px] flex-1 bg-slate-100"></div>
+        <div class="h-[1px] flex-1 bg-brand-navy/10"></div>
+        <h2 class="text-2xl font-black text-brand-navy px-6 py-2 border border-brand-burgundy/20 rounded-full bg-white/40 uppercase tracking-widest text-xs">Allied Health & BPT</h2>
+        <div class="h-[1px] flex-1 bg-brand-navy/10"></div>
       </div>
-      <div class="grid md:grid-cols-2 gap-8">
-        <!-- AT-OT -->
-        <div class="glass-card p-10 bg-white border-slate-100 hover:border-accent-500/20 transition-all group relative">
-           <div class="absolute top-6 right-6 bg-accent-100 text-accent-700 text-[8px] font-black px-3 py-1 rounded-full uppercase tracking-widest">Lateral Entry Available</div>
-           <div class="flex justify-between items-start mb-6">
-              <span class="text-accent-600 font-bold tracking-widest text-[10px] uppercase">Specialized UG</span>
-              <span class="text-slate-400 font-bold text-[10px] uppercase">3+1 Years</span>
-           </div>
-           <h3 class="text-2xl font-black text-slate-900 mb-4 group-hover:text-accent-600 transition-colors">B.Sc AT-OT</h3>
-           <p class="text-slate-500 font-light text-sm mb-8">Anaesthesia & Operation Theatre Technology for surgical precision.</p>
-           <button class="text-[10px] font-black uppercase tracking-widest text-slate-900 group-hover:text-accent-600 transition-colors flex items-center gap-2">View Details <span class="group-hover:translate-x-1 transition-transform">→</span></button>
-        </div>
-        <!-- Optometry -->
-        <div class="glass-card p-10 bg-white border-slate-100 hover:border-accent-500/20 transition-all group relative">
-           <div class="absolute top-6 right-6 bg-accent-100 text-accent-700 text-[8px] font-black px-3 py-1 rounded-full uppercase tracking-widest">Lateral Entry Available</div>
-           <div class="flex justify-between items-start mb-6">
-              <span class="text-accent-600 font-bold tracking-widest text-[10px] uppercase">Specialized UG</span>
-              <span class="text-slate-400 font-bold text-[10px] uppercase">4 Years</span>
-           </div>
-           <h3 class="text-2xl font-black text-slate-900 mb-4 group-hover:text-accent-600 transition-colors">B.Sc Optometry</h3>
-           <p class="text-slate-500 font-light text-sm mb-8">Mastering the science of vision care and ophthalmic precision.</p>
-           <button class="text-[10px] font-black uppercase tracking-widest text-slate-900 group-hover:text-accent-600 transition-colors flex items-center gap-2">View Details <span class="group-hover:translate-x-1 transition-transform">→</span></button>
-        </div>
-        <!-- MIT -->
-        <div class="glass-card p-10 bg-white border-slate-100 hover:border-accent-500/20 transition-all group relative">
-           <div class="absolute top-6 right-6 bg-accent-100 text-accent-700 text-[8px] font-black px-3 py-1 rounded-full uppercase tracking-widest">Lateral Entry Available</div>
-           <div class="flex justify-between items-start mb-6">
-              <span class="text-accent-600 font-bold tracking-widest text-[10px] uppercase">Specialized UG</span>
-              <span class="text-slate-400 font-bold text-[10px] uppercase">3+1 Years</span>
-           </div>
-           <h3 class="text-2xl font-black text-slate-900 mb-4 group-hover:text-accent-600 transition-colors">B.Sc MIT</h3>
-           <p class="text-slate-500 font-light text-sm mb-8">Medical Imaging Technology for diagnostic excellence.</p>
-           <button class="text-[10px] font-black uppercase tracking-widest text-slate-900 group-hover:text-accent-600 transition-colors flex items-center gap-2">View Details <span class="group-hover:translate-x-1 transition-transform">→</span></button>
-        </div>
-        <!-- MLT -->
-        <div class="glass-card p-10 bg-white border-slate-100 hover:border-accent-500/20 transition-all group relative">
-           <div class="absolute top-6 right-6 bg-accent-100 text-accent-700 text-[8px] font-black px-3 py-1 rounded-full uppercase tracking-widest">Lateral Entry Available</div>
-           <div class="flex justify-between items-start mb-6">
-              <span class="text-accent-600 font-bold tracking-widest text-[10px] uppercase">Specialized UG</span>
-              <span class="text-slate-400 font-bold text-[10px] uppercase">3+1 Years</span>
-           </div>
-           <h3 class="text-2xl font-black text-slate-900 mb-4 group-hover:text-accent-600 transition-colors">B.Sc MLT</h3>
-           <p class="text-slate-500 font-light text-sm mb-8">Medical Laboratory Technology for analytical clinical accuracy.</p>
-           <button class="text-[10px] font-black uppercase tracking-widest text-slate-900 group-hover:text-accent-600 transition-colors flex items-center gap-2">View Details <span class="group-hover:translate-x-1 transition-transform">→</span></button>
-        </div>
-      </div>
-    </div>
 
-    <!-- Physiotherapy -->
-    <div class="mb-24">
-      <div class="flex items-center gap-4 mb-12">
-        <div class="h-[1px] flex-1 bg-slate-100"></div>
-        <h2 class="text-2xl font-black text-slate-900 px-6 py-2 border border-green-500/10 rounded-full glass bg-white/50 uppercase tracking-widest text-sm text-green-600">Physiotherapy</h2>
-        <div class="h-[1px] flex-1 bg-slate-100"></div>
-      </div>
-      <div class="grid md:grid-cols-2 gap-8">
+      <div class="grid md:grid-cols-2 gap-6">
+        
         <!-- BPT -->
-        <div class="glass-card p-10 bg-white border-slate-100 hover:border-green-500/20 transition-all group">
-           <div class="flex justify-between items-start mb-6">
-              <span class="text-green-600 font-bold tracking-widest text-[10px] uppercase">Undergraduate</span>
-              <span class="text-slate-400 font-bold text-[10px] uppercase">4.5 Years</span>
+        <div class="bg-brand-navy rounded-2xl overflow-hidden shadow-2xl flex flex-col justify-between text-white course-card-gold relative group">
+           <div class="absolute -top-10 -right-10 w-40 h-40 bg-brand-gold/5 rounded-full blur-3xl group-hover:bg-brand-gold/10 transition-all duration-700"></div>
+           
+           <div class="relative z-10 p-8">
+             <div class="flex justify-between items-start mb-5">
+                <span class="text-brand-gold text-[9px] font-black uppercase tracking-widest">Rehabilitation UG</span>
+                <span class="bg-white/10 text-white text-[9px] font-black px-3 py-1 rounded-full">4.5 Years</span>
+             </div>
+             <h3 class="text-2xl font-black text-white mb-3 group-hover:text-brand-gold-light transition-colors">BPT</h3>
+             <p class="text-white/70 font-light text-sm leading-relaxed mb-6">
+               The Bachelor of Physiotherapy (BPT) is a 4.5-year undergraduate program (4 years academic + 6 months mandatory internship) focusing on the science of physical movement, injury rehabilitation, and pain management through exercise, electrotherapy, and manual techniques.
+             </p>
            </div>
-           <h3 class="text-2xl font-black text-slate-900 mb-4 group-hover:text-green-600 transition-colors">BPT</h3>
-           <p class="text-slate-500 font-light text-sm mb-8">Bachelor of Physiotherapy for comprehensive physical rehabilitation.</p>
-           <button class="text-[10px] font-black uppercase tracking-widest text-slate-900 group-hover:text-green-600 transition-colors flex items-center gap-2">View Details <span class="group-hover:translate-x-1 transition-transform">→</span></button>
+           
+           <div class="pt-6 border-t border-white/10 mt-6 space-y-4 relative z-10">
+             <button (click)="toggleCourseDetails('bpt')" class="w-full flex justify-between items-center text-xs font-black uppercase tracking-widest text-white hover:text-brand-gold transition-colors focus:outline-none">
+               <span>Career Prospects (12 options)</span>
+               <span class="text-lg font-light">{{ expandedCourse() === 'bpt' ? '−' : '+' }}</span>
+             </button>
+             
+             <div *ngIf="expandedCourse() === 'bpt'" class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-white/70 font-light py-2 animate-fade-in-up">
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Clinical Physiotherapist</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Sports Physiotherapist</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Rehabilitation Specialist</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Pediatric/Geriatric Physio</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Ergonomist Consultant</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Home Care Physiotherapist</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Academician/Lecturer</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Researcher</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Pain Management Specialist</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Hospitals & Clinics</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Sports Organizations</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Corporate & NGO</div>
+             </div>
+
+             <button (click)="admissions.openModal()" class="w-full bg-brand-gold hover:bg-white text-brand-navy font-bold uppercase tracking-widest text-[10px] py-4 rounded-xl shadow-lg shadow-brand-gold/15 transition-all active:scale-95 duration-200">
+               Apply Online
+             </button>
+           </div>
+        </div>
+
+        <!-- B.Sc. (AT & OT) -->
+        <div class="bg-white rounded-[2.5rem] p-10 border border-brand-navy/5 shadow-xl hover:shadow-2xl transition-all group flex flex-col justify-between">
+           <div>
+             <div class="flex justify-between items-start mb-6">
+                <span class="text-brand-burgundy font-black tracking-widest text-[9px] uppercase">Specialized Allied UG</span>
+                <span class="text-brand-navy/50 font-bold text-[10px] uppercase">Duration: 3 Years</span>
+             </div>
+             <h3 class="text-3xl font-black text-brand-navy mb-4 group-hover:text-brand-burgundy transition-colors">B.Sc. (AT & OT)</h3>
+             <p class="text-brand-navy/70 font-light text-sm leading-relaxed mb-6">
+               The B.Sc. Anaesthesia & Operation Theatre Technology is an allied health professional course. It aims to train students with clinical exposure in operation theatre management, disinfection, sterilisation, responsibilities in anesthesia, and maintaining all the instruments used in the operation theatre before and after procedures.
+             </p>
+           </div>
+           
+           <div class="pt-6 border-t border-slate-100 mt-6 space-y-4">
+             <button (click)="toggleCourseDetails('at_ot')" class="w-full flex justify-between items-center text-xs font-black uppercase tracking-widest text-brand-navy hover:text-brand-gold transition-colors focus:outline-none">
+               <span>Career Prospects (9 options)</span>
+               <span class="text-lg font-light">{{ expandedCourse() === 'at_ot' ? '−' : '+' }}</span>
+             </button>
+             
+             <div *ngIf="expandedCourse() === 'at_ot'" class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-brand-navy/70 font-light py-2 animate-fade-in-up">
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> OT Technician</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Anesthesia Technologist</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Critical Care Tech</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Surgical Assistant</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Endoscopy Technician</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Trauma Care Technician</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Clinical Instructor/Associate</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Hospitals & Clinics</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Surgical Centers</div>
+             </div>
+
+             <button (click)="admissions.openModal()" class="w-full bg-brand-gold hover:bg-brand-navy hover:text-white text-brand-navy font-bold uppercase tracking-widest text-[10px] py-4 rounded-xl shadow-lg shadow-brand-gold/15 transition-all active:scale-95 duration-200">
+               Apply Online
+             </button>
+           </div>
+        </div>
+
+        <!-- B.Sc. MIT -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-brand-navy/5 shadow-lg hover:shadow-2xl transition-all group flex flex-col justify-between course-card-burgundy">
+           <div class="p-8">
+             <div class="flex justify-between items-start mb-5">
+                <span class="text-brand-burgundy text-[9px] font-black uppercase tracking-widest">Medical Imaging</span>
+                <span class="bg-brand-cream text-brand-navy text-[9px] font-black px-3 py-1 rounded-full">3 Years</span>
+             </div>
+             <h3 class="text-2xl font-black text-brand-navy mb-3 group-hover:text-brand-burgundy transition-colors">B.Sc. MIT</h3>
+             <p class="text-brand-navy/70 font-light text-sm leading-relaxed mb-6">
+               A Bachelor of Science in Medical Imaging Technology (B.Sc. MIT) is an undergraduate program training professionals to operate diagnostic equipment like X-rays, CT scans, MRIs, and ultrasound. It focuses on anatomy, physiology, radiation safety, and patient care, preparing students for roles as radiology technologists in hospitals and clinics.
+             </p>
+           </div>
+           
+           <div class="pt-6 border-t border-slate-100 mt-6 space-y-4">
+             <button (click)="toggleCourseDetails('mit')" class="w-full flex justify-between items-center text-xs font-black uppercase tracking-widest text-brand-navy hover:text-brand-gold transition-colors focus:outline-none">
+               <span>Career Prospects (9 options)</span>
+               <span class="text-lg font-light">{{ expandedCourse() === 'mit' ? '−' : '+' }}</span>
+             </button>
+             
+             <div *ngIf="expandedCourse() === 'mit'" class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-brand-navy/70 font-light py-2 animate-fade-in-up">
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Radiology Technologist</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> CT/MRI Technologist</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Resonance Imaging (MRI)</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Ultrasound Sonographer</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Cath Lab Technologist</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Mammographer</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Application Specialist</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Radiation Safety Officer</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> PACS Administrator</div>
+             </div>
+
+             <button (click)="admissions.openModal()" class="w-full bg-brand-gold hover:bg-brand-navy hover:text-white text-brand-navy font-bold uppercase tracking-widest text-[10px] py-4 rounded-xl shadow-lg shadow-brand-gold/15 transition-all active:scale-95 duration-200">
+               Apply Online
+             </button>
+           </div>
+        </div>
+
+        <!-- B.Sc. Optometry -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-brand-navy/5 shadow-lg hover:shadow-2xl transition-all group flex flex-col justify-between course-card-burgundy">
+           <div class="p-8">
+             <div class="flex justify-between items-start mb-5">
+                <span class="text-brand-burgundy text-[9px] font-black uppercase tracking-widest">Vision Science UG</span>
+                <span class="bg-brand-cream text-brand-navy text-[9px] font-black px-3 py-1 rounded-full">3+1 Years</span>
+             </div>
+             <h3 class="text-2xl font-black text-brand-navy mb-3 group-hover:text-brand-burgundy transition-colors">B.Sc. Optometry</h3>
+             <p class="text-brand-navy/70 font-light text-sm leading-relaxed mb-6">
+               B.Sc. Optometry is a 4-year undergraduate program (typically 3 years of study + 1-year internship) focused on eye care, vision science, and diagnosing ocular disorders. It prepares students to become primary healthcare professionals skilled in prescribing glasses, contact lenses, and managing eye diseases.
+             </p>
+           </div>
+           
+           <div class="pt-6 border-t border-slate-100 mt-6 space-y-4">
+             <button (click)="toggleCourseDetails('optometry')" class="w-full flex justify-between items-center text-xs font-black uppercase tracking-widest text-brand-navy hover:text-brand-gold transition-colors focus:outline-none">
+               <span>Career Prospects (8 options)</span>
+               <span class="text-lg font-light">{{ expandedCourse() === 'optometry' ? '−' : '+' }}</span>
+             </button>
+             
+             <div *ngIf="expandedCourse() === 'optometry'" class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-brand-navy/70 font-light py-2 animate-fade-in-up">
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Clinical Optometrist</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Contact Lens Specialist</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Orthoptics/Vision Therapist</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Dispensing Optician</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Ophthalmic Technician</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Low Vision Consultant</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Optometry Researcher</div>
+                <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Occupational Optometrist</div>
+             </div>
+
+             <button (click)="admissions.openModal()" class="w-full bg-brand-gold hover:bg-brand-navy hover:text-white text-brand-navy font-bold uppercase tracking-widest text-[10px] py-4 rounded-xl shadow-lg shadow-brand-gold/15 transition-all active:scale-95 duration-200">
+               Apply Online
+             </button>
+           </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── BOTTOM CTA STRIP ── -->
+    <div class="mt-20 rounded-[2.5rem] overflow-hidden relative" style="background: linear-gradient(135deg, #8B1C46 0%, #5A0F2E 55%, #06395E 100%);" data-animate="scale-in">
+      <div class="absolute inset-0 hero-diagonal-lines opacity-50 pointer-events-none"></div>
+      <div class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8 px-10 py-14 lg:px-16">
+        <div class="text-center lg:text-left space-y-3">
+          <span class="badge-institution-white">Admissions Open 2026–27</span>
+          <h3 class="text-3xl md:text-4xl font-black text-white tracking-tight mt-3">
+            Begin Your Healthcare<br><span class="text-brand-gold-light">Journey Today.</span>
+          </h3>
+          <p class="text-white/55 font-light text-base max-w-lg">RGUHS affiliated. INC recognized. Expert faculty. Hands-on clinical training from day one.</p>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-4 flex-shrink-0">
+          <button (click)="admissions.openModal()" class="btn-gold px-10 py-5 text-base">
+            Apply Now — 2026
+          </button>
+          <a href="tel:+918129036949" class="btn-outline-white px-8 py-5">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+            Call Admissions
+          </a>
         </div>
       </div>
     </div>
 
   </section>
-
 
 </div>
