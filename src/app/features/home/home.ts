@@ -18,22 +18,16 @@ export class Home implements OnInit, AfterViewInit, OnDestroy {
 
   public slides = [
     {
-      image: 'campus_hero.png',
-      alt: 'Sree Narayana Campus',
-      badgeTitle: 'INC Recognized',
-      badgeSub: 'Nursing · Allied Health · BPT'
+      image: 'advslides/1.jpeg',
+      alt: 'Advertisement 1'
     },
     {
-      image: 'campus_facility_lab_1773404343142.png',
-      alt: 'Clinical Simulation Lab',
-      badgeTitle: 'Advanced Labs',
-      badgeSub: 'Simulation & Practical Training'
+      image: 'advslides/2.jpeg',
+      alt: 'Advertisement 2'
     },
     {
-      image: 'campus_facility_library_1773404359783.png',
-      alt: 'Central & Digital Library',
-      badgeTitle: 'Modern Library',
-      badgeSub: '10,000+ Books & E-Resources'
+      image: 'advslides/3.jpeg',
+      alt: 'Advertisement 3'
     }
   ];
   public currentSlide = 0;
