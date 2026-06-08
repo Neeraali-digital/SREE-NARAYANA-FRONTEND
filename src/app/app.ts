@@ -1,5 +1,5 @@
 import { Component, signal, inject, OnInit, PLATFORM_ID } from '@angular/core';
-import { RouterOutlet, Router, NavigationEnd } from '@angular/router';
+import { RouterOutlet, Router, NavigationStart, NavigationEnd, NavigationCancel, NavigationError } from '@angular/router';
 import { Header } from './shared/header/header';
 import { Footer } from './shared/footer/footer';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
@@ -19,21 +19,34 @@ export class App implements OnInit {
   private scrollAnim = inject(ScrollAnimationService);
   private router = inject(Router);
   private platformId = inject(PLATFORM_ID);
+  
+  public isLoading = signal(false);
 
   ngOnInit() {
     // Initialize scroll animations globally (browser only)
     this.scrollAnim.init();
 
-    // Re-init on every navigation end (page change)
-    this.router.events
-      .pipe(filter(event => event instanceof NavigationEnd))
-      .subscribe(() => {
-        if (isPlatformBrowser(this.platformId)) {
+    // Setup router events for loader and scroll
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationStart) {
+        this.isLoading.set(true);
+      } else if (
+        event instanceof NavigationEnd || 
+        event instanceof NavigationCancel || 
+        event instanceof NavigationError
+      ) {
+        if (isPlatformBrowser(this.platformId) && event instanceof NavigationEnd) {
           // Scroll to top on route change
           window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior });
         }
-        // Re-observe new elements with delay for render
-        setTimeout(() => this.scrollAnim.refresh(), 150);
-      });
+        
+        // Hide loader after a tiny delay for smoothness
+        setTimeout(() => {
+          this.isLoading.set(false);
+          // Re-observe new elements with delay for render
+          setTimeout(() => this.scrollAnim.refresh(), 150);
+        }, 500);
+      }
+    });
   }
 }

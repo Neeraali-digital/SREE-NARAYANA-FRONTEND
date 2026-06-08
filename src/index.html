@@ -11,6 +11,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <app-root></app-root>
+  <app-root>
+    <div style="position: fixed; inset: 0; z-index: 9999; display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: #ffffff;">
+      <img src="SN logo black.png" alt="Sree Narayana Logo" style="width: 120px; height: auto; margin-bottom: 30px; animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;">
+      <div style="width: 48px; height: 48px; border: 4px solid #f1f5f9; border-top-color: #7A1A40; border-radius: 50%; animation: spin 1s linear infinite;"></div>
+      <p style="margin-top: 16px; font-size: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(4, 21, 37, 0.6); font-family: 'Inter', sans-serif;">Loading</p>
+    </div>
+    <style>
+      @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+      @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .5; } }
+    </style>
+  </app-root>
 </body>
 </html>
