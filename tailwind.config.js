@@ -56,8 +56,8 @@ module.exports = {
         }
       },
       fontFamily: {
-        sans: ['"Outfit"', 'sans-serif'],
-        inter: ['"Inter"', 'sans-serif'],
+        sans: ['"Inter"', 'sans-serif'],
+        serif: ['"Merriweather"', 'serif'],
       },
       animation: {
         'blob': 'blob 7s infinite',
